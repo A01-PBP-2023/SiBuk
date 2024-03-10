@@ -26,22 +26,22 @@ Pengguna dapat memberikan ulasan dan rating setelah berbuka sesuai dengan menu y
 
 ## 📃 Daftar Modul
 ### 😋 Favorite Food & Drink
-Dikerjakan oleh beliau
+#### Dikerjakan oleh beliau
 Pada fitur ini pengguna dapat menambahkan makanan dan/atau minuman ke dalam list favorit. Pengguna dapat melihat detail makanan dan/atau minuman pada web SiBuk seperti nama makanan ataupun minuman, harganya, dan juga toko yang menjual makanan dan minuman tersebut. Pengguna juga dapat melihat review pengguna lain pada makanan dan minuman yang ada di list Favorite food & drink
 
 ### 🍔 Food List
-Dikerjakan oleh si Anu
+#### Dikerjakan oleh si Anu
 Pada fitur ini pengguna dapat melihat list makanan-makanan yang berupa katalog berbentuk card view, pengguna juga dapat melakukan filter rasa seperti asam, manis, dan asin pada list makanan. Pengguna nantinya juga dapat melihat halaman detail dari makanan dan menambahkan makanan-makanan ke dalam list Favorite Food & Drink.
 
 ### 🍹Drink List
-Dikerjakan oleh Fulan
+#### Dikerjakan oleh Fulan <br>
 Pada fitur ini pengguna dapat melihat list minuman-minuman yang berupa katalog berbentuk card view, pengguna juga dapat melakukan filter rasa seperti asam dan manis pada list minuman. Pengguna nantinya juga dapat melihat halaman detail dari minuman yang dipilihnya dan juga dapat menambahkan minuman-minuman yang dia pilih ke dalam list Favorite Food & Drink.
 
 ### 🍽️ Food & Drink Recomendation
-Dikerjakan oleh Fulanah
+#### Dikerjakan oleh Fulanah
 
 ### ⭐ Food & Drink Review
-Dikerjakan oleh seseorang
+#### Dikerjakan oleh seseorang
 
 ## 💾 Dataset
 
