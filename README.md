@@ -1,11 +1,11 @@
 # SiBuk (Siap berBuka)
 
 ## 🎉 Anggota Kelompok A1
-* 🧑‍🦲 [Gistela Namasya Sinurat](https://github.com/GistelaS) (2306335594)
-* 🧑‍🦲 [A. Nurcahaya Tampubolon](https://github.com/clvdyo) (2306335575)
-* 🧑‍🦲 [Mikhael Deo Barli](https://github.com/Midebar) (1906350572)
-* 🧑‍🦲 [Nazwa Allysa](https://github.com/averitastio) (2206083672)
-* 🧑‍🦲 [Muhammad Eagel Triutama](https://github.com/MhmdEagel) (2306335606)
+* 👩‍🦰 [Gistela Namasya Sinurat](https://github.com/GistelaS) (2306335594)
+* 👩 [A. Nurcahaya Tampubolon](https://github.com/clvdyo) (2306335575)
+* 🧑‍🦰 [Mikhael Deo Barli](https://github.com/Midebar) (1906350572)
+* 👩‍🦰 [Nazwa Allysa](https://github.com/averitastio) (2206083672)
+* 👨‍🦱 [Muhammad Eagel Triutama](https://github.com/MhmdEagel) (2306335606)
 
 ## Tautan Aplikasi
 
@@ -25,8 +25,25 @@ Aplikasi ini membantu mengurangi kebingungan dan memastikan pengguna mendapatkan
 Pengguna dapat memberikan ulasan dan rating setelah berbuka sesuai dengan menu yang telah disediakan. Ini membantu pengguna lain dalam memilih makanan atau minuman yang berkualitas.
 
 ## 📃 Daftar Modul
-Berikut ini fitur-fitur di dalam aplikasi SiBuk
-
-### 🍔 Favorite Food & Drink
+### 😋 Favorite Food & Drink
 Dikerjakan oleh beliau
-Pada fitur ini pengguna dapat menambahkan makanan dan/atau minuman ke dalam list favorit 
+Pada fitur ini pengguna dapat menambahkan makanan dan/atau minuman ke dalam list favorit. Pengguna dapat melihat detail makanan dan/atau minuman pada web SiBuk seperti nama makanan ataupun minuman, harganya, dan juga toko yang menjual makanan dan minuman tersebut. Pengguna juga dapat melihat review pengguna lain pada makanan dan minuman yang ada di list Favorite food & drink
+
+### 🍔 Food List
+Dikerjakan oleh si Anu
+Pada fitur ini pengguna dapat melihat list makanan-makanan yang berupa katalog berbentuk card view, pengguna juga dapat melakukan filter rasa seperti asam, manis, dan asin pada list makanan. Pengguna nantinya juga dapat melihat halaman detail dari makanan dan menambahkan makanan-makanan ke dalam list Favorite Food & Drink.
+
+### 🍹Drink List
+Dikerjakan oleh Fulan
+Pada fitur ini pengguna dapat melihat list minuman-minuman yang berupa katalog berbentuk card view, pengguna juga dapat melakukan filter rasa seperti asam dan manis pada list minuman. Pengguna nantinya juga dapat melihat halaman detail dari minuman yang dipilihnya dan juga dapat menambahkan minuman-minuman yang dia pilih ke dalam list Favorite Food & Drink.
+
+### 🍽️ Food & Drink Recomendation
+Dikerjakan oleh Fulanah
+
+### ⭐ Food & Drink Review
+Dikerjakan oleh seseorang
+
+## 💾 Dataset
+
+## 🧑‍💻 Role/Peran Pengguna
+
