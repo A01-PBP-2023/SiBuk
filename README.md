@@ -46,6 +46,9 @@ Pada fitur ini pengguna dapat melihat list rekomendasi makanan dan minuman setia
 Pada fitur ini, pengguna dapat memberi review, rating, atau ulasan tentang suatu makanan atau minuman.
 
 ## 💾 Dataset
+Dataset yang kami gunakan adalah berikut.<br>
+[Indonesia food delivery GoFood product list](https://www.kaggle.com/datasets/ariqsyahalam/indonesia-food-delivery-gofood-product-list)<br>
+Dari dataset tersebut akan diambil data makanan dan minuman dengan perbandingan 85:15. Data makanan yang diambil nantinya akan dikategorikan ke makanan berat, makanan asin/gurih, makanan manis, takjil, dan sebagainya.
 
 ## 🧑‍💻 Role/Peran Pengguna
 
