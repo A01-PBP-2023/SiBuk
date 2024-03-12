@@ -39,9 +39,11 @@ Pada fitur ini pengguna dapat melihat list minuman-minuman yang berupa katalog b
 
 ### 🍽️ Food & Drink Recomendation
 #### Dikerjakan oleh Fulanah
+Pada fitur ini pengguna dapat melihat list rekomendasi makanan dan minuman setiap harinya. Rekomendasi makanan dan minuman akan ditampilkan pada laman Home.
 
 ### ⭐ Food & Drink Review
 #### Dikerjakan oleh seseorang
+Pada fitur ini, pengguna dapat memberi review, rating, atau ulasan tentang suatu makanan atau minuman.
 
 ## 💾 Dataset
 
