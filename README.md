@@ -26,23 +26,23 @@ Pengguna dapat memberikan ulasan dan rating setelah berbuka sesuai dengan menu y
 
 ## 📃 Daftar Modul
 ### 😋 Favorite Food & Drink
-#### Dikerjakan oleh beliau
+#### Dikerjakan oleh Gistella
 Pada fitur ini pengguna dapat menambahkan makanan dan/atau minuman ke dalam list favorit. Pengguna dapat melihat detail makanan dan/atau minuman pada web SiBuk seperti nama makanan ataupun minuman, harganya, dan juga toko yang menjual makanan dan minuman tersebut. Pengguna juga dapat melihat review pengguna lain pada makanan dan minuman yang ada di list Favorite food & drink
 
 ### 🍔 Food List
-#### Dikerjakan oleh si Anu
+#### Dikerjakan oleh Nurcahaya
 Pada fitur ini pengguna dapat melihat list makanan-makanan yang berupa katalog berbentuk card view, pengguna juga dapat melakukan filter rasa seperti asam, manis, dan asin pada list makanan. Pengguna nantinya juga dapat melihat halaman detail dari makanan dan menambahkan makanan-makanan ke dalam list Favorite Food & Drink.
 
 ### 🍹Drink List
-#### Dikerjakan oleh Fulan <br>
+#### Dikerjakan oleh Nazwa
 Pada fitur ini pengguna dapat melihat list minuman-minuman yang berupa katalog berbentuk card view, pengguna juga dapat melakukan filter rasa seperti asam dan manis pada list minuman. Pengguna nantinya juga dapat melihat halaman detail dari minuman yang dipilihnya dan juga dapat menambahkan minuman-minuman yang dia pilih ke dalam list Favorite Food & Drink.
 
 ### 🍽️ Food & Drink Recomendation
-#### Dikerjakan oleh Nazwa
+#### Dikerjakan oleh Eagel
 Pada fitur ini pengguna dapat melihat list rekomendasi makanan dan minuman setiap harinya. Rekomendasi makanan dan minuman akan ditampilkan pada laman Home.
 
 ### ⭐ Food & Drink Review
-#### Dikerjakan oleh Nazwa
+#### Dikerjakan oleh Barli
 Pada fitur ini, pengguna dapat memberi review, rating, atau ulasan tentang suatu makanan atau minuman.
 
 ## 💾 Dataset
@@ -51,4 +51,5 @@ Dataset yang kami gunakan adalah berikut.<br>
 Dari dataset tersebut akan diambil data makanan dan minuman dengan perbandingan 85:15. Data makanan yang diambil nantinya akan dikategorikan ke makanan berat, makanan asin/gurih, makanan manis, takjil, dan sebagainya.
 
 ## 🧑‍💻 Role/Peran Pengguna
+
 
