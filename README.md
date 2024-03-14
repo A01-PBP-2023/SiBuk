@@ -51,5 +51,5 @@ Dataset yang kami gunakan adalah berikut.<br>
 Dari dataset tersebut akan diambil data makanan dan minuman dengan perbandingan 85:15. Data makanan yang diambil nantinya akan dikategorikan ke makanan berat, makanan asin/gurih, makanan manis, takjil, dan sebagainya.
 
 ## 🧑‍💻 Role/Peran Pengguna
-
+Terdapat dua peran pada aplikasi ini, yaitu admin dan user. Setiap peran memiliki keterbatasan dan keleluasaan akses masing-masing. Admin dapat menambahkan list makanan/minuman dan memfilter review makanan/minuman yang diberikan oleh user. User dapat mengakses list makanan dan minuman, mengakses list rekomendasi makanan dan minuman, menambahkan makanan/minuman ke dalam list favorit, dan juga memberikan review terhadap suatu makanan/minuman.
 
