@@ -38,11 +38,11 @@ Pada fitur ini pengguna dapat melihat list makanan-makanan yang berupa katalog b
 Pada fitur ini pengguna dapat melihat list minuman-minuman yang berupa katalog berbentuk card view, pengguna juga dapat melakukan filter rasa seperti asam dan manis pada list minuman. Pengguna nantinya juga dapat melihat halaman detail dari minuman yang dipilihnya dan juga dapat menambahkan minuman-minuman yang dia pilih ke dalam list Favorite Food & Drink.
 
 ### 🍽️ Food & Drink Recomendation
-#### Dikerjakan oleh Fulanah
+#### Dikerjakan oleh Nazwa
 Pada fitur ini pengguna dapat melihat list rekomendasi makanan dan minuman setiap harinya. Rekomendasi makanan dan minuman akan ditampilkan pada laman Home.
 
 ### ⭐ Food & Drink Review
-#### Dikerjakan oleh seseorang
+#### Dikerjakan oleh Nazwa
 Pada fitur ini, pengguna dapat memberi review, rating, atau ulasan tentang suatu makanan atau minuman.
 
 ## 💾 Dataset
