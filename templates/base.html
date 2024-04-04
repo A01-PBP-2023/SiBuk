@@ -2,12 +2,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% block meta %} {% endblock meta %}
+    {% include "head.html" %}
+    {% block meta %}
+    {% endblock meta %}
 </head>
 
 <body>
-    {% block content %} {% endblock content %}
+    {% include "navbar.html" %}
+    {% block content %}
+    {% endblock content %}
+
+
+    {% include "base_scripts.html" %}
 </body>
 </html>
