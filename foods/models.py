@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Foods(models.Model):
+class Food(models.Model):
     id = models.AutoField(primary_key=True)
     FOOD_CHOICES = [
         ('asam', 'Asam'),
