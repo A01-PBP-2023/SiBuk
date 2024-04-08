@@ -1,4 +1,23 @@
-{% extends 'base.html' %} 
+{% extends "base.html" %}
+
+{% block meta %}
+<title>SiBuk</title>
+{% endblock meta %}
+
 {% block content %}
-<h1>This is food's page</h1>
+<div class="container mx-auto mt-6 p-6 bg-white rounded shadow-lg">
+    <img class="w-[12.5%] max-w-md" src="{{ food.Image }}" alt="{{ food.Product_name }}">
+    <br>
+    <h1 class="text-2xl font-bold mb-4">{{ food.Product_name }}</h1>
+    <p><strong>Category:</strong> {{ food.Category }}</p>
+    <p><strong>Merchant Area:</strong> {{ food.Merchant_area }}</p>
+    <p><strong>Product Description:</strong> {{ food.Product_description }}</p>
+    <br>
+    <button onclick="returnToFood()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Back to Food</button>
+</div>
 {% endblock content %}
+
+{% block script %}
+<script src="/static/js/nav_script.js"></script>
+<script src="/static/js/modal_food.js"></script>
+{% endblock script %}
