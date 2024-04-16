@@ -22,4 +22,5 @@ urlpatterns = [
     path('reviews/<int:content_type_id>/<int:object_id>/', include("reviews.urls")),  
     path('', include('recommended.urls')),
     path('foods/', include('foods.urls')),
+    path('foods/', include('foods.urls')),
 ]
