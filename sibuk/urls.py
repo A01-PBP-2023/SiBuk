@@ -19,6 +19,14 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
     path('', include('recommended.urls')),
     path('api/foods/', include('foods.urls')),
+=======
+    path('reviews/<int:content_type_id>/<int:object_id>/', include("reviews.urls")),  
+    path('', include('recommended.urls')),
+    path('favorites/', include('favfnd.urls')),
+    path('foods/', include('foods.urls'))
+    
+>>>>>>> origin/main
 ]
