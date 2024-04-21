@@ -24,20 +24,22 @@ def import_data():
                 drinks.append({
                     'model': 'drinks.Drink',
                     'fields': {
-                        'Product_name': row['product'],
-                        'Merchant_area': row['merchant_area'],
-                        'Category': row['category'],
-                        'Product_description': row['description']
+                        'product': row['product'],
+                        'merchant_area': row['merchant_area'],
+                        'merchant_name': row['merchant_name'],
+                        'category': row['category'],
+                        'description': row['description']
                     }
                 })
             else:
                 foods.append({
                     'model': 'foods.Food',
                     'fields': {
-                        'Product_name': row['product'],
-                        'Merchant_area': row['merchant_area'],
-                        'Category': row['category'],
-                        'Product_description': row['description']
+                        'product': row['product'],
+                        'merchant_area': row['merchant_area'],
+                        'merchant_name': row['merchant_name'],
+                        'category': row['category'],
+                        'description': row['description']
                     }
                 })
             count+=1

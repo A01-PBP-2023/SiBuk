@@ -2,469 +2,521 @@
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Pisang Lumer Coklat",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Sajian Pisang Lumer Dengan Rasa Coklat Yang Begitu Menggoda"
+      "product": "Pisang Lumer Coklat",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Sajian Pisang Lumer Dengan Rasa Coklat Yang Begitu Menggoda"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Roti Bakar",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Sajian Roti Bakar Kombinasi Keju Coklat Dan Wijen"
+      "product": "Roti Bakar",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Sajian Roti Bakar Kombinasi Keju Coklat Dan Wijen"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Kentang Goreng",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Sajian Kentang Goreng"
+      "product": "Kentang Goreng",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Sajian Kentang Goreng"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Paket Ngemil 1",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Roti Bakar + Kopi Almara"
+      "product": "Paket Ngemil 1",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Roti Bakar + Kopi Almara"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Paket Ngemil 2",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Roti Goreng + Kopi Almara"
+      "product": "Paket Ngemil 2",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Roti Goreng + Kopi Almara"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Paket Ngemil 3",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Kentang Goreng + Kopi Almara"
+      "product": "Paket Ngemil 3",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Kentang Goreng + Kopi Almara"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Paket Mix Bento",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Mix Bento + Leci/Lemon Tea"
+      "product": "Paket Mix Bento",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Mix Bento + Leci/Lemon Tea"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Paket Bento Shrimp Roll",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Shrimp Roll + Leci/Lemon Tea"
+      "product": "Paket Bento Shrimp Roll",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Shrimp Roll + Leci/Lemon Tea"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Paket Bento Ebi Furai",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Ebi Furai + Leci/Lemon Tea"
+      "product": "Paket Bento Ebi Furai",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Ebi Furai + Leci/Lemon Tea"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Paket Bento Ekkado",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Ekkado + Leci/Lemon Tea"
+      "product": "Paket Bento Ekkado",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Ekkado + Leci/Lemon Tea"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Paket Chicken Teriyaki",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Chicken Teriyaki + Leci/Lemon Tea"
+      "product": "Paket Chicken Teriyaki",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Chicken Teriyaki + Leci/Lemon Tea"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Paket Chicken Blackpaper",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Chicken Blackpaper + Leci/Lemon Tea"
+      "product": "Paket Chicken Blackpaper",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Chicken Blackpaper + Leci/Lemon Tea"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Paket Beff Teriyaki",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Beff Teriyaki + Leci/Lemon Tea"
+      "product": "Paket Beff Teriyaki",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Beff Teriyaki + Leci/Lemon Tea"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Paket Beff Blackpaper",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Beff Blackpaper + Leci/Lemon Tea"
+      "product": "Paket Beff Blackpaper",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Beff Blackpaper + Leci/Lemon Tea"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Paket Mie Ayam",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Mie Ayam + Leci/Lemon Tea"
+      "product": "Paket Mie Ayam",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Mie Ayam + Leci/Lemon Tea"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Paket Mie Ayam Bakso",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Mie Ayam Bakso + Leci/Lemon Tea"
+      "product": "Paket Mie Ayam Bakso",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Mie Ayam Bakso + Leci/Lemon Tea"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Paket Mie Yamin",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Mie Yamin + Leci/Lemon Tea"
+      "product": "Paket Mie Yamin",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Mie Yamin + Leci/Lemon Tea"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Paket Mie Yamin Bakso",
-      "Merchant_area": "jakarta",
-      "Category": "Kopi/Minuman/Roti",
-      "Product_description": "Mie Yamin Bakso + Leci/Lemon Tea"
+      "product": "Paket Mie Yamin Bakso",
+      "merchant_area": "jakarta",
+      "merchant_name": "330 Kopi, Ciledug",
+      "category": "Kopi/Minuman/Roti",
+      "description": "Mie Yamin Bakso + Leci/Lemon Tea"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Hemat Berdua",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "2 Chicken Steak + 2 Es Jeruk"
+      "product": "Hemat Berdua",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "2 Chicken Steak + 2 Es Jeruk"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Hemat 1",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "1 Chicken + Es Teh Manis"
+      "product": "Hemat 1",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "1 Chicken + Es Teh Manis"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Hemat Combo 3",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "1 Chicken + 1 Sirloin + 1 Tenderloin + 3 Es Teh Manis"
+      "product": "Hemat Combo 3",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "1 Chicken + 1 Sirloin + 1 Tenderloin + 3 Es Teh Manis"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Hemat Combo 2",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Blackpepper + Tenderloin Double + 2 Es Jeruk"
+      "product": "Hemat Combo 2",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Blackpepper + Tenderloin Double + 2 Es Jeruk"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Hemat Combo 1",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Chicken Double + Sirloin Double + 2 Es Jeruk"
+      "product": "Hemat Combo 1",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Chicken Double + Sirloin Double + 2 Es Jeruk"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Hemat Super 5",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "5 Chicken Steak + 5 Es Teh Manis"
+      "product": "Hemat Super 5",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "5 Chicken Steak + 5 Es Teh Manis"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Chicken Steak Pops",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Chicken, Kentang, Mix Vegetable, Brown Sauce"
+      "product": "Chicken Steak Pops",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Chicken, Kentang, Mix Vegetable, Brown Sauce"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Sirloin Steak Beef Pops",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Daging Sapi Crispy, Kentang, Mix Vegetablre, Brown Sauce"
+      "product": "Sirloin Steak Beef Pops",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Daging Sapi Crispy, Kentang, Mix Vegetablre, Brown Sauce"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Tenderloin Steak Beef Pop",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Daging Sapi Has Dalam, Mix Vegetable, Kentang, Brown Sauce"
+      "product": "Tenderloin Steak Beef Pop",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Daging Sapi Has Dalam, Mix Vegetable, Kentang, Brown Sauce"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Chicken Crispy",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Dijamin ketagihan"
+      "product": "Chicken Crispy",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Dijamin ketagihan"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Tenderloin Crispy",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Testur daging sapi has dalam yg begitu lembut"
+      "product": "Tenderloin Crispy",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Testur daging sapi has dalam yg begitu lembut"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Sirloin Steak Crispy",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Steak daging sapi menggunakan daging has luar"
+      "product": "Sirloin Steak Crispy",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Steak daging sapi menggunakan daging has luar"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Chicken Double",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": ""
+      "product": "Chicken Double",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": ""
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Sirloin Double",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Steak Daging Sapi Has Luar Crispy"
+      "product": "Sirloin Double",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Steak Daging Sapi Has Luar Crispy"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Tenderloin Double",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Menggunakan daging has dalam, testur lebih lembut"
+      "product": "Tenderloin Double",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Menggunakan daging has dalam, testur lebih lembut"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Beef Steak",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Steak daging sapi original dengan kuah mashroom"
+      "product": "Beef Steak",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Steak daging sapi original dengan kuah mashroom"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Blackpepper",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Steak daging sapi original dengan kuah lada hitam"
+      "product": "Blackpepper",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Steak daging sapi original dengan kuah lada hitam"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Chicken Mushroom",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Steak Ayam Dada Vilet Kuah Mushroom"
+      "product": "Chicken Mushroom",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Steak Ayam Dada Vilet Kuah Mushroom"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Chicken Pepper",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Steak Ayam Dada Vilet Kuah Lada Hitam"
+      "product": "Chicken Pepper",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Steak Ayam Dada Vilet Kuah Lada Hitam"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Sirloin Import 175 Gram",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Steak Daging Sapi Has Luar Import Kuah Mushroom"
+      "product": "Sirloin Import 175 Gram",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Steak Daging Sapi Has Luar Import Kuah Mushroom"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Rib Eye Import 175 Gram",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Steak Daging Sapi Import Rib"
+      "product": "Rib Eye Import 175 Gram",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Steak Daging Sapi Import Rib"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Chicken Steak Geprek",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Sensasi makan steak pedas"
+      "product": "Chicken Steak Geprek",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Sensasi makan steak pedas"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Sirloin Steak Geprek",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Sensasi makan steak daging sapi yg pedas, sudah sama nasi"
+      "product": "Sirloin Steak Geprek",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Sensasi makan steak daging sapi yg pedas, sudah sama nasi"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Tenderloin Steak Geprek",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Sensasi makan steak daging sapi pedas, sudah sama nasi"
+      "product": "Tenderloin Steak Geprek",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Sensasi makan steak daging sapi pedas, sudah sama nasi"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Steak Cumi",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Steak Cumi Crispy"
+      "product": "Steak Cumi",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Steak Cumi Crispy"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Steak Tuna Pepper",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Steak Tuna Bakar Lada Hitam"
+      "product": "Steak Tuna Pepper",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Steak Tuna Bakar Lada Hitam"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Steak Tuna Mushroom",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Steak Tuna Bakar Kuah Jamur"
+      "product": "Steak Tuna Mushroom",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Steak Tuna Bakar Kuah Jamur"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Steak Dori Crispy",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": "Steak Ikan Dori Crispy"
+      "product": "Steak Dori Crispy",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": "Steak Ikan Dori Crispy"
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Nasi",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": ""
+      "product": "Nasi",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": ""
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Kuah Steak",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": ""
+      "product": "Kuah Steak",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": ""
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Chicken Drumstick",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": ""
+      "product": "Chicken Drumstick",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": ""
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Spaghetty",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": ""
+      "product": "Spaghetty",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": ""
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Kentang Lokal",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": ""
+      "product": "Kentang Lokal",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": ""
     }
   },
   {
     "model": "foods.Food",
     "fields": {
-      "Product_name": "Frenchfries",
-      "Merchant_area": "jakarta",
-      "Category": "Aneka nasi/Minuman/Barat",
-      "Product_description": ""
+      "product": "Frenchfries",
+      "merchant_area": "jakarta",
+      "merchant_name": "Abe Steak, Cibubur",
+      "category": "Aneka nasi/Minuman/Barat",
+      "description": ""
     }
   }
 ]

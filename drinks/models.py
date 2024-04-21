@@ -7,8 +7,8 @@ class Drink(models.Model):
         ('coffee', 'Coffee'),
         ('non_coffee', 'Non Coffee'),
     ]
-    Merchant_area = models.CharField(max_length=255)
-    Product_name = models.CharField(max_length=255)
-    Category = models.CharField(max_length=13, choices=Drink_Choices)
-    Product_description = models.CharField(max_length=255)
-    Image = models.URLField()
+    merchant_area = models.CharField(max_length=255)
+    merchant_name = models.CharField(max_length=255)
+    category = models.CharField(max_length=13, choices=Drink_Choices)
+    product = models.CharField(max_length=255)
+    description = models.CharField(max_length=255)
