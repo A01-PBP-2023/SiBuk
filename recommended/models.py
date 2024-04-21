@@ -1,8 +1,5 @@
 from django.db import models
 
-# Create your models here.
-<<<<<<< HEAD
-=======
 class Recommended(models.Model) :
    merchant_name = models.TextField(null=True, blank=True)
    merchant_area = models.TextField(null=True, blank=True)
@@ -13,4 +10,3 @@ class Recommended(models.Model) :
    discount_price = models.IntegerField(null=True, blank=True)
    isDiscount = models.IntegerField(null=True, blank=True)
    description = models.TextField(null=True, blank=True)
->>>>>>> origin/main
