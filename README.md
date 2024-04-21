@@ -31,7 +31,7 @@ Pada fitur ini pengguna dapat menambahkan makanan dan/atau minuman ke dalam list
 
 ### 🍔 Food List
 #### Dikerjakan oleh Nurcahaya
-Pada fitur ini pengguna dapat melihat list makanan-makanan yang berupa katalog berbentuk card view, pengguna juga dapat melakukan filter rasa seperti asam, manis, dan asin pada list makanan. Pengguna nantinya juga dapat melihat halaman detail dari makanan dan menambahkan makanan-makanan ke dalam list Favorite Food & Drink.
+Pada fitur ini pengguna dapat melihat list makanan-makanan yang berupa katalog berbentuk card view, pengguna juga dapat melakukan filter kategori makanan seperti nasi, snack, mie, dan lainnya pada list makanan. Pengguna nantinya juga dapat melihat halaman detail dari makanan dan menambahkan makanan-makanan ke dalam list Favorite Food & Drink.
 
 ### 🍹Drink List
 #### Dikerjakan oleh Nazwa

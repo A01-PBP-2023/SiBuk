@@ -4,3 +4,4 @@ from django.shortcuts import render
 
 def show_favorites(request):
     return render(request, 'favorites.html')
+

@@ -8,9 +8,4 @@ class FoodFilterForm(forms.Form):
 class AddFoodForm(forms.ModelForm):
     class Meta:
         model = Food
-        fields = ['Merchant_area', 'Category', 'Product_name', 'Product_description', 'Image']
-        widgets = {
-            'Product_name': forms.TextInput(attrs={'placeholder': 'Product Name'}),
-            'Product_description': forms.TextInput(attrs={'placeholder': 'Product Description'}),
-            'Image': forms.URLInput(attrs={'placeholder': 'Image URL'}),
-        }
+        fields = ['merchant_area', 'merchant_name', 'category', 'product', 'description']

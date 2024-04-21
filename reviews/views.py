@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+from django.shortcuts import render
+
+# Create your views here.
+=======
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseBadRequest, HttpResponseRedirect, JsonResponse
 from django.contrib.contenttypes.models import ContentType
@@ -41,3 +46,4 @@ from django.urls import reverse
 #     reviews = Review.objects.filter(content_type=content_type, object_id=object_id)
 #     reviews_data = serializers.serialize('json', reviews)
 #     return JsonResponse({'reviews': reviews_data}, safe=False)
+>>>>>>> origin/main
