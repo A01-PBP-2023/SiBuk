@@ -4,12 +4,13 @@ from django.db import models
 class Food(models.Model):
     id = models.AutoField(primary_key=True)
     FOOD_CHOICES = [
-        ('asam', 'Asam'),
-        ('manis', 'Manis'),
-        ('gurih', 'Gurih'),
+        ('nasi', 'Nasi'),
+        ('snack', 'Snack'),
+        ('mie', 'Mie'),
+        ('lainnya', 'Lainnya')
     ]
-    Merchant_area = models.CharField(max_length=255)
-    Product_name = models.CharField(max_length=255)
-    Category = models.CharField(max_length=13, choices=FOOD_CHOICES)
-    Product_description = models.CharField(max_length=255)
-    Image = models.URLField()
+    merchant_area = models.CharField(max_length=255)
+    merchant_name = models.CharField(max_length=255)
+    category = models.CharField(max_length=13, choices=FOOD_CHOICES)
+    product = models.CharField(max_length=255)
+    description = models.CharField(max_length=255)

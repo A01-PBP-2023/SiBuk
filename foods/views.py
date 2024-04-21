@@ -15,10 +15,10 @@ def show_food(request):
         merchant_area = form.cleaned_data.get("merchant_area")
 
         if category:
-            foods = foods.filter(Category=category)
+            foods = foods.filter(category=category)
 
         if merchant_area:
-            foods = foods.filter(Merchant_area__icontains=merchant_area)
+            foods = foods.filter(merchant_area__icontains=merchant_area)
 
     context = {
         'form': form,
@@ -36,13 +36,13 @@ def food_detail(request, food_id):
 def add_food(request):
     if request.method == "POST":
         merchant_area = request.POST.get('Merchant_area')
-        category = request.POST.get('Category')
-        product_name = request.POST.get('Product_name')
-        product_description = request.POST.get('Product_description')
+        category = request.POST.get('category')
+        product = request.POST.get('product')
+        description = request.POST.get('description')
         image = request.POST.get('Image')
 
-        new_food = Food(Merchant_area=merchant_area, Category=category, Product_name=product_name,
-                        Product_description=product_description, Image=image)
+        new_food = Food(merchant_area=merchant_area, category=category, product=product,
+                        description=description, Image=image)
         new_food.save()
         return HttpResponse(b"CREATED", status=201)
     return HttpResponseNotFound()
@@ -62,9 +62,9 @@ def filter_foods(request):
 
     foods = Food.objects.all()
     if category:
-        foods = foods.filter(Category=category)
+        foods = foods.filter(category=category)
     if merchant_area:
-        foods = foods.filter(Merchant_area__icontains=merchant_area)
+        foods = foods.filter(merchant_area__icontains=merchant_area)
 
     foods_json = serializers.serialize('json', foods)
     return JsonResponse(foods_json, safe=False)

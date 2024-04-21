@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'reviews',
     'favfnd',
     'foods',
     'recommended',
@@ -40,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'reviews',
 ]
 
 MIDDLEWARE = [

@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 class Recommended(models.Model) :
    merchant_name = models.TextField(null=True, blank=True)
    merchant_area = models.TextField(null=True, blank=True)
