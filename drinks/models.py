@@ -4,8 +4,8 @@ from django.db import models
 class Drink(models.Model):
     id = models.AutoField(primary_key=True)
     DRINK_CHOICES = [
-        ('asam', 'Asam'),
-        ('manis', 'Manis')
+        ('kopi', 'Kopi'),
+        ('non kopi', 'Non kopi')
     ]
     merchant_area = models.CharField(max_length=255)
     product_name = models.CharField(max_length=255)
