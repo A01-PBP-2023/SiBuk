@@ -49,7 +49,8 @@ def add_food(request):
 
 def get_food(request):
     data = Food.objects.all()
-    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+    return HttpResponse(serializers.serialize("json", data), 
+    content_type="application/json")
 
 def get_food_by_id(request, id):
     data = Food.objects.filter(pk=id)
