@@ -1188,7 +1188,7 @@
     },
 
     {
-        "pk": 99,
+        "pk": 100,
         "model": "drinks.drink",
         "fields": {
           "merchant_area": "jakarta",
