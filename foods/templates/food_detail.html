@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block meta %}
 <title>SiBuk</title>
 {% endblock meta %}
@@ -14,8 +14,10 @@
     <p><strong>Product Description:</strong> {{ food.Product_description }}</p>
     <br>
     <button onclick="returnToFood()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Back to Food</button>
-    <button onclick="reviewFood()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Review</button>
+    <button id="reviewButton" data-content-type-id="food" data-object-id="{{ food.pk }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Review</button>
 </div>
+
+<script src="{% static 'food/js/reviewFood.js' %}"></script>
 {% endblock content %}
 
 {% block script %}
