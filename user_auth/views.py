@@ -13,7 +13,7 @@ def register(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your account has been successfully created!')
-            return redirect('auth:login')
+            return redirect('user_auth:login')
     context = {'form':form}
     return render(request, 'register.html', context)
 
