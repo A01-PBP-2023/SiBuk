@@ -58,5 +58,4 @@ def get_reviews_template(request, content_type, object_id):
     else:
         return HttpResponseBadRequest("Invalid content type")
     reviews = Review.objects.filter(content_type=content_type, object_id=object_id)
-    reviews_data = serializers.serialize('json', reviews)
-    pass
+    return render(request, 'fnd_reviews.html', {'reviews': reviews})
