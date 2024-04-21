@@ -6,12 +6,13 @@
 
 {% block content %}
 <div class="container mx-auto mt-6 p-6 bg-white rounded shadow-lg">
-    <img class="w-[12.5%] max-w-md" src="{{ food.Image }}" alt="{{ food.Product_name }}">
+    <img class="w-[12.5%] max-w-md" src="{{ food.Image }}" alt="{{ food.product }}">
     <br>
-    <h1 class="text-2xl font-bold mb-4">{{ food.Product_name }}</h1>
-    <p><strong>Category:</strong> {{ food.Category }}</p>
-    <p><strong>Merchant Area:</strong> {{ food.Merchant_area }}</p>s
-    <p><strong>Product Description:</strong> {{ food.Product_description }}</p>
+    <h1 class="text-2xl font-bold mb-4">{{ food.product }}</h1>
+    <p><strong>Category:</strong> {{ food.category }}</p>
+    <p><strong>Merchant Name:</strong> {{ food.merchant_name }}</p>
+    <p><strong>Merchant Area:</strong> {{ food.merchant_area }}</p>
+    <p><strong>Product Description:</strong> {{ food.description }}</p>
     <br>
     <button onclick="returnToFood()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Back to Food</button>
     <button id="reviewButton" data-content-type-id="food" data-object-id="{{ food.pk }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Review</button>
