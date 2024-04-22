@@ -92,9 +92,8 @@
 <section class="recommended-container container-fluid">
   <h2 class="hero-title text-center">Explore Our Recommendation</h2>
   <div class="card-container m-4 p-4 d-flex flex-wrap gap-4 justify-content-center">
-    {% for foodItem in food %}
+    {% for foodItem in data %}
     <!-- #### Card Item #### -->
-    {% for food in data %}
     <div class="card-box">
       <div class="card-box-inner shadow-sm">
         <div class="card-box-front d-flex gap-4">
@@ -117,5 +116,4 @@
     <!-- #### Card Item #### -->
   </div>
 </section>
-
 {% endblock content %}
