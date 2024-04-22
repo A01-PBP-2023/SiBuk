@@ -4,6 +4,7 @@ from django.contrib.contenttypes.models import ContentType
 from django.contrib.auth.decorators import login_required
 from django.core import serializers
 from django.urls import reverse
+from django.db.models import Avg
 
 from .models import Review
 from .forms import ReviewForm
@@ -65,9 +66,12 @@ def get_all_reviews_template(request):
     foods = Food.objects.all()
     for food in foods:
         reviews = food.reviews.all()
-        data.append(reviews)
+        avg_rating = reviews.rating_set.aggregate(Avg('rating')).values()[0]
+        data.append(food.pk, food.product, avg_rating)
     drinks = Drink.objects.all()
     for drink in drinks:
         reviews = drink.reviews.all()
-        data.append(reviews)
+        avg_rating = reviews.rating_set.aggregate(Avg('rating')).values()[0]
+        data.append(drink.product, avg_rating)
+    print(data)
     return render(request, 'all_reviews.html', {'reviews': data})
