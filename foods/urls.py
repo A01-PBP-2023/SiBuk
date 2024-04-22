@@ -7,7 +7,7 @@ urlpatterns = [
     path('', show_food, name='show_food'),
     path('food_detail/<int:food_id>/', food_detail, name='food_detail'),
     path('add_food/', add_food, name='add_food'),
-    path('', get_food, name='get_food'),
+    path('get_food/', get_food, name='get_food'),
     path('get_food/<int:id>/', get_food_by_id, name="get_food_by_id"),
     path('filter_foods/', filter_foods, name='filter_foods'),
 ]
