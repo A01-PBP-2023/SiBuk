@@ -35,14 +35,13 @@ def drink_detail(request, drink_id):
 @csrf_exempt
 def add_drink(request):
     if request.method == "POST":
-        merchant_area = request.POST.get('Merchant_area')
-        category = request.POST.get('Category')
-        product_name = request.POST.get('Product_name')
-        product_description = request.POST.get('Product_description')
-        image = request.POST.get('Image')
+        merchant_area = request.POST.get('merchant_area')
+        category = request.POST.get('category')
+        product = request.POST.get('product')
+        description = request.POST.get('description')
 
-        new_drink = Drink(Merchant_area=merchant_area, Category=category, Product_name=product_name,
-                        Product_description=product_description, Image=image)
+        new_drink = Drink(Merchant_area=merchant_area, Category=category, Product=product,
+                        Description=description)
         new_drink.save()
         return HttpResponse(b"CREATED", status=201)
     return HttpResponseNotFound()
