@@ -1,14 +1,17 @@
 {% extends 'base.html' %} {% load static %} {% block meta %}
-<title>SiBuk</title>
+<title>Home | SiBuk</title>
 {% endblock meta %} {% block content %}
 <!-- Hero Section -->
 <main
-  class="hero-container container-fluid py-4 d-flex flex-wrap align-items-center justify-content-evenly"
+  class="hero-container mx-auto py-4"
 >
-  <section>
+  <section class="hero-image-container">
+    <img src="static/images/hero.png" class="block hero-image" />
+  </section>
+  <section class="hero-content-container">
     <h2 class="hero-title">Enhance your iftar experience,</h2>
     <h2 class="hero-title">with SiBuk</h2>
-    <div class="hero-items d-flex gap-3 mt-4">
+    <div class="hero-items d-flex gap-3 mt-4 mx-auto">
       <div class="text-center d-flex flex-column" style="width: fit-content">
         <span style="font-size: 2rem" class="hero-item-icon">
           <i class="fa-solid fa-bowl-food"></i>
@@ -38,9 +41,6 @@
       </div>
     </div>
   </section>
-  <section>
-    <img src="static/images/hero.png" class="block hero-image" />
-  </section>
 </main>
 
 <!-- Features Section -->
@@ -49,30 +49,30 @@
   <div
     class="features-items d-flex flex-wrap gap-4 text-center justify-content-center mt-4"
   >
-    <div class="p-4 feature-item shadow-sm position-relative">
+    <a class="p-4 feature-item shadow-sm position-relative" href="{% url 'foods:show_food' %}">
       <div class="feature-item-img">
         <img src="static/images/food.png" alt="" class="food-img" />
       </div>
       <div class="feature-item-desc">
-        <h3>Food Catalogue</h3>
+        <h3 class="feature-title">Food Catalogue</h3>
         <div class="features-desc">Explore delicious food</div>
       </div>
-    </div>
-    <div class="p-4 feature-item shadow-sm position-relative">
+    </a>
+    <a class="p-4 feature-item shadow-sm position-relative" href="#">
       <div class="feature-item-img">
         <img src="static/images/drinks.png" alt="" class="drinks-img" />
       </div>
       <div class="feature-item-desc">
-        <h3>Drink Catalogue</h3>
+        <h3 class="feature-title">Drink Catalogue</h3>
         <p class="features-desc">Find all fresh drinks</p>
       </div>
-    </div>
-    <div class="p-4 feature-item shadow-sm position-relative">
+    </a>
+    <a class="p-4 feature-item shadow-sm position-relative" href="{% url 'favfnd:show_favorites' %}">
       <div class="feature-item-img">
         <img src="static/images/favorites.png" alt="" class="favorites-img" />
       </div>
       <div class="feature-item-desc">
-        <h3>Favorites</h3>
+        <h3 class="feature-title">Favorites</h3>
         <p class="features-desc">Add to favorites</p>
       </div>
     </div>
@@ -82,7 +82,7 @@
         <img src="static/images/reviews.png" alt="" class="reviews-img" />
       </div>
       <div class="feature-item-desc">
-        <h3>Reviews</h3>
+        <h3 class="feature-title">Reviews</h3>
         <div class="features-desc">Give your review</div>
       </div>
     </a>
@@ -94,24 +94,20 @@
 <section class="recommended-container container-fluid">
   <h2 class="hero-title text-center">Explore Our Recommendation</h2>
   <div class="card-container m-4 p-4 d-flex flex-wrap gap-4">
-    <!-- <div
-      class="card-item d-flex gap-4 shadow-sm border border-1"
-    >
-      
-      <h4 class="mt-4 card-item-title">Sample Text</h4>
-    </div> -->
-    <div class="card-box shadow-sm">
-      <div class="card-box-inner">
+    <!-- #### Card Item #### -->
+    <div class="card-box">
+      <div class="card-box-inner shadow-sm">
         <div class="card-box-front d-flex gap-4">
           <img
-            src="static/images/card-decoration.jpg"
+            src="{% static  'images/card-decoration.jpg' %}"
             class="card-decoration"
             alt="card-decoration"
           />
           <div class="card-box-description">
             <h5 class="card-box-title mt-4">Sample Text</h5>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, earum.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. In,
+              earum.
             </p>
           </div>
         </div>
@@ -120,6 +116,7 @@
         </div>
       </div>
     </div>
+    <!-- #### Card Item #### -->
   </div>
 </section>
 
