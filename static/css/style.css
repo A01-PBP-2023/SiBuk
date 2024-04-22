@@ -183,13 +183,15 @@
   .card-box-front {
     background-color: white;
     border-radius: 10px;
+    color: var(--dark-green);
   }
 
   .card-box-back {
-    background-color: dodgerblue;
+    background-color: var(--dark-green);
     color: white;
     transform: rotateY(180deg);
     border-radius: 10px;
+    position: relative;
     
   }
 
@@ -201,10 +203,22 @@
   .card-decoration {
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px;
+      height: 100%;
   }
 
   .card-box-title {
     color: var(--dark-green);
+  }
+
+  .trash_icon {
+   position: absolute;
+   top: 10px;
+   right: 20px;
+   font-size: 1.25rem;
+  }
+
+  .trash_icon :hover{
+    color: grey;
   }
 
 /* Favorites */
@@ -225,6 +239,7 @@ footer {
   background-color: var(--deep-green);
   font-size: .85rem;
   color: var(--light-green);
+  margin-top: 50%;
 }
 
 .footer-desc {

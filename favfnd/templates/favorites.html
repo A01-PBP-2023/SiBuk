@@ -1,24 +1,49 @@
-{% extends 'base.html' %} {% load static %} {% block meta %}
-<title>Favorites | SiBuk</title>
-{% endblock meta %} {% block content %}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Favorites | SiBUk</title>
+{% endblock meta %}
+
+{% block content %}
 <!--Menu-->
 
-<div class="menu" id="Menu">
-  <h1>Your<span>Favorites</span></h1>
+  <h1 class="favorite-headline">Your<span class="favorite-sub-headline">Favorites</span></h1>
 
-  <div class="card-box ">
-    <div class="card-box-inner shadow-sm">
-      <div class="card-box-front d-flex gap-4">
-        {% load static %}
-        <img
-          src="{% static  'images/card-decoration.jpg' %}"
-          class="card-decoration"
-          alt="card-decoration"
-        />
-        <div class="card-box-description">
-          <h5 class="card-box-title mt-4">Sample Text</h5>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, earum.
+ 
+
+  <!-- #### Card Item #### -->
+
+  <div class="container-fluid m-4">
+    <div class="card-box shadow-sm">
+      <div class="card-box-inner">
+        <div class="card-box-front d-flex gap-4 align-items-center">
+          <img src="{%static 'images/card-decoration.jpg'%}" class="card-decoration" alt="card-decoration" />
+          <div class="card-box-description">
+  
+            <h2>Buger</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+            </p>
+            <h3>$20.00</h3>
+  
+  
+  
+  
+          </div>
+        </div>
+        <div class="card-box-back">
+          <div class="trash_icon"> <i class="fa-solid fa-trash"></i></div>
+          <div class="menu_icon text-center " style = "padding-top: 50px; font-size: 32px;">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+            
+          </div>
+          <p style="max-width: 300px;" class="mx-auto mt-4">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
           </p>
         </div>
       </div>
