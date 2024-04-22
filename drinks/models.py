@@ -8,7 +8,7 @@ class Drink(models.Model):
         ('non kopi', 'Non kopi')
     ]
     merchant_area = models.CharField(max_length=255)
-    product_name = models.CharField(max_length=255)
+    merchant_name = models.CharField(max_length=255)
+    product = models.CharField(max_length=255)
     category = models.CharField(max_length=13, choices=DRINK_CHOICES)
-    product_description = models.CharField(max_length=255)
-    image = models.URLField()
+    description = models.CharField(max_length=255)
