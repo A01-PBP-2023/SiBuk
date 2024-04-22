@@ -11,8 +11,11 @@
     {% include "navbar.html" %}
     {% block content %}
     {% endblock content %}
-    {% include "base_scripts.html" %}
-
     {% include "footer.html" %}
+
+
+    {% include "base_scripts.html" %}
+    {% block script %}
+    {% endblock script %}
 </body>
 </html>

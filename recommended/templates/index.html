@@ -91,7 +91,8 @@
 <!-- Recommended Section -->
 <section class="recommended-container container-fluid">
   <h2 class="hero-title text-center">Explore Our Recommendation</h2>
-  <div class="card-container m-4 p-4 d-flex flex-wrap gap-4">
+  <div class="card-container m-4 p-4 d-flex flex-wrap gap-4 justify-content-center">
+    {% for foodItem in data %}
     <!-- #### Card Item #### -->
     <div class="card-box">
       <div class="card-box-inner shadow-sm">
@@ -102,20 +103,17 @@
             alt="card-decoration"
           />
           <div class="card-box-description">
-            <h5 class="card-box-title mt-4">Sample Text</h5>
+            <h5 class="card-box-title mt-4">{{food.product}}</h5>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. In,
               earum.
             </p>
           </div>
         </div>
-        <div class="card-box-back">
-          <h2>Back Side</h2>
-        </div>
       </div>
     </div>
+    {% endfor %}
     <!-- #### Card Item #### -->
   </div>
 </section>
-
 {% endblock content %}

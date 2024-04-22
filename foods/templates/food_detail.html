@@ -5,23 +5,39 @@
 {% endblock meta %}
 
 {% block content %}
-<div class="container mx-auto mt-6 p-6 bg-white rounded shadow-lg">
-    <img class="w-[12.5%] max-w-md" src="{{ food.Image }}" alt="{{ food.product }}">
-    <br>
-    <h1 class="text-2xl font-bold mb-4">{{ food.product }}</h1>
-    <p><strong>Category:</strong> {{ food.category }}</p>
-    <p><strong>Merchant Name:</strong> {{ food.merchant_name }}</p>
-    <p><strong>Merchant Area:</strong> {{ food.merchant_area }}</p>
-    <p><strong>Product Description:</strong> {{ food.description }}</p>
-    <br>
-    <button onclick="returnToFood()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Back to Food</button>
-    <button id="reviewButton" data-content-type-id="food" data-object-id="{{ food.pk }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Review</button>
+<div class="d-flex flex-wrap gap-4 justify-content-center mt-4">
+    <div class="card-box">
+        <div class="card-box-inner shadow-sm">
+          <div class="card-box-front d-flex gap-4">
+            <img
+              src="{% static  'images/card-decoration.jpg' %}"
+              class="card-decoration"
+              alt="card-decoration"
+            />
+            <div class="card-box-description">
+              <h5 class="card-box-title mt-4" style="font-size: 1.25rem;">{{ food.product.title }}</h5>
+              <div>
+                <p><strong>Merchant Area:</strong> {{ food.merchant_area.title }}</p>
+                <p><strong>Merchant Name:</strong> {{ food.merchant_name }}</p>
+                <p><strong>Product Description:</strong> {{ food.description }}</p>
+                <p><strong>Category:</strong> {{ food.category }}</p>
+                <button type="button" onclick="window.location.href = `{% url 'foods:show_food' %}` " class="btn btn-outline-success">Back to Food</button>
+                <button id="reviewButton" data-content-type-id="food" data-object-id="{{ food.pk }}" class="btn btn-outline-warning">Review</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+   
 </div>
+
 
 <script src="{% static 'food/js/reviewFood.js' %}"></script>
 {% endblock content %}
 
 {% block script %}
+</script>
 <script src="/static/js/nav_script.js"></script>
 <script src="/static/js/modal_food.js"></script>
 {% endblock script %}
