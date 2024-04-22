@@ -154,21 +154,46 @@
     border-radius: 10px;
     perspective: 1000px; 
     cursor: pointer;
-    transform: scale(1);
-    transition: all 500ms;
   }
+  
+  /* .card-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
+  } */
 
-  .card-box:hover {
-    cursor: pointer;
-    transform: scale(1.005) translateY(-0.5em);
-    transition: all 500ms;
+  /* .card-box-front, .card-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
   }
+  
+
+  .card-box:hover .card-box-inner {
+    transform: rotateY(180deg);
+  } */
 
   .card-box-front {
     background-color: white;
     border-radius: 10px;
   }
-  
+
+  /* .card-box-back {
+    background-color: var(--dark-green);
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    position: relative;
+    
+  } */
+
   .card-box-description {
     text-align: left;
   }
