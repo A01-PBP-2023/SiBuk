@@ -5,70 +5,35 @@
 {% endblock meta %}
 
 {% block content %}
-<div class="container mx-auto mt-6 p-6 bg-white rounded shadow-lg">
-    <br>
-    <h1 class="text-2xl font-bold mb-4">{{ food.product.title }}</h1>
-    <p><strong>Merchant Area:</strong> {{ food.merchant_area.title }}</p>
-    <p><strong>Merchant Name:</strong> {{ food.merchant_name }}</p>
-    <p><strong>Product Description:</strong> {{ food.description }}</p>
-    <p><strong>Category:</strong> {{ food.category }}</p>
-    <br>
-    <button onclick="window.location.href = `{% url 'foods:show_food' %}` " class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Back to Food</button>
-    <button id="reviewButton" data-content-type-id="food" data-object-id="{{ food.pk }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Review</button>
-</div>
+<div class="d-flex flex-wrap gap-4 justify-content-center mt-4">
+    <div class="card-box">
+        <div class="card-box-inner shadow-sm">
+          <div class="card-box-front d-flex gap-4">
+            <img
+              src="{% static  'images/card-decoration.jpg' %}"
+              class="card-decoration"
+              alt="card-decoration"
+            />
+            <div class="card-box-description">
+              <h5 class="card-box-title mt-4" style="font-size: 1.25rem;">{{ food.product.title }}</h5>
+              <div>
+                <p><strong>Merchant Area:</strong> {{ food.merchant_area.title }}</p>
+                <p><strong>Merchant Name:</strong> {{ food.merchant_name }}</p>
+                <p><strong>Product Description:</strong> {{ food.description }}</p>
+                <p><strong>Category:</strong> {{ food.category }}</p>
+                <button type="button" onclick="window.location.href = `{% url 'foods:show_food' %}` " class="btn btn-outline-success">Back to Food</button>
+                <button id="reviewButton" data-content-type-id="food" data-object-id="{{ food.pk }}" class="btn btn-outline-warning">Review</button>
 
-<div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      {% include 'review_modal.html' %}
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
-  </div>
+   
 </div>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const reviewButton = document.getElementById("reviewButton");
-  const reviewModal = $('#reviewModal');
 
-  function showModal() {
-    reviewModal.modal('show');
-  }
-
-  function hideModal() {
-    reviewModal.modal('hide');
-  }
-
-  reviewButton.addEventListener("click", showModal);
-  reviewModal.on('click', '.close', hideModal);
-  reviewModal.on('click', '#close-modal', hideModal);
-
-  reviewModal.on('submit', '#review-form', function(event) {
-    event.preventDefault();
-    const formData = $(this).serialize();
-    $.ajax({
-      type: 'POST',
-      url: '{% url "reviews:review_fnd_ajax" content_type="food" object_id=food.pk %}',
-      data: formData,
-      dataType: 'json',
-      success: function(response) {
-        if (response.login_required) {
-            window.location.href = '{% url "user_auth:login" %}';
-        } else if(response.success) {
-            window.location.href = response.redirect_url;
-        } else {
-          console.error('Submission failed:', response.error);
-        }
-      },
-      error: function(xhr, status, error) {
-        console.error('Error:', xhr.responseText);
-      }
-    });
-  });
-
-});
-</script>
-
-
+<script src="{% static 'food/js/reviewFood.js' %}"></script>
 {% endblock content %}
 
 {% block script %}
