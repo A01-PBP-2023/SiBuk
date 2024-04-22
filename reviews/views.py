@@ -4,8 +4,7 @@ from django.contrib.contenttypes.models import ContentType
 from django.contrib.auth.decorators import login_required
 from django.core import serializers
 from django.urls import reverse
-from django.db.models import Count, Avg
-from django.template.loader import render_to_string
+from django.db.models import Avg
 
 from .models import Review
 from .forms import ReviewForm
@@ -95,29 +94,13 @@ def get_all_reviews_partial(request):
 
     foods = Food.objects.prefetch_related('reviews').annotate(num_reviews=Count('reviews')).all()
     for food in foods:
-        food_data = serializers.serialize('python', [food])[0]
-        food_data['type'] = 'food'
-        food_data['fields']['average_rating'] = food.reviews.aggregate(avg_rating=Avg('rating'))['avg_rating'] or 0
-        food_data['fields']['percentage_rating'] = food_data['fields']['average_rating']/5*100
-        food_data['fields']['num_reviews'] = food.num_reviews
-        data.append(food_data)
-
-    drinks = Drink.objects.prefetch_related('reviews').annotate(num_reviews=Count('reviews')).all()
+        reviews = food.reviews.all()
+        avg_rating = reviews.rating_set.aggregate(Avg('rating')).values()[0]
+        data.append(food.pk, food.product, avg_rating)
+    drinks = Drink.objects.all()
     for drink in drinks:
-        drink_data = serializers.serialize('python', [drink])[0]
-        drink_data['type'] = 'drink'
-        drink_data['fields']['average_rating'] = drink.reviews.aggregate(avg_rating=Avg('rating'))['avg_rating'] or 0
-        drink_data['fields']['percentage_rating'] = drink_data['fields']['average_rating']/5*100
-        drink_data['fields']['num_reviews'] = drink.num_reviews
-        data.append(drink_data)
-
-    sort_by = request.GET.get('sort_by')
-    if sort_by == 'rating':
-        data.sort(key=lambda x: x['fields']['average_rating'] or 0, reverse=True)
-    elif sort_by == 'reviews':
-        data.sort(key=lambda x: x['fields']['num_reviews'], reverse=True)
-
-    # Render the template with the data
-    html_content = render_to_string('partial_all_reviews.html', {'data': data})
-
-    return JsonResponse({'html_content': html_content})
+        reviews = drink.reviews.all()
+        avg_rating = reviews.rating_set.aggregate(Avg('rating')).values()[0]
+        data.append(drink.product, avg_rating)
+    print(data)
+    return render(request, 'all_reviews.html', {'reviews': data})
