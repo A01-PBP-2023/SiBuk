@@ -1,49 +1,65 @@
-<<<<<<< HEAD
-from django.shortcuts import render
-
-# Create your views here.
-=======
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseBadRequest, HttpResponseRedirect, JsonResponse
 from django.contrib.contenttypes.models import ContentType
+from django.contrib.auth.decorators import login_required
 from django.core import serializers
 from django.urls import reverse
 
-# from .models import Review
-# from foods.models import Foods # Change this
-# from drinks.models import Drinks # Change this
+from .models import Review
+from .forms import ReviewForm
+from foods.models import Food
+from drinks.models import Drink
 
-# def review_FnD(request, content_type_id, object_id):
-#     # Get the content type and object based on IDs
-#     content_type = get_object_or_404(ContentType, pk=content_type_id)
-#     if content_type.model == 'foods':
-#         obj = get_object_or_404(Foods, pk=object_id)
-#     elif content_type.model == 'drinks':
-#         obj = get_object_or_404(Drinks, pk=object_id)
-#     else:
-#         return HttpResponseBadRequest("Invalid content type")
+@login_required(login_url='/user_auth/login')
+def review_FnD(request, content_type, object_id):
+    content_type = ContentType.objects.get(model=content_type)
+    if content_type.model == 'food':
+        obj = get_object_or_404(Food, pk=object_id)
+    elif content_type.model == 'drink':
+        obj = get_object_or_404(Drink, pk=object_id)
+    else:
+        return HttpResponseBadRequest("Invalid content type")
 
-#     if request.method == 'POST':
-#         rating = request.POST.get('rating')
-#         review = request.POST.get('review')
-#         review = Review.objects.create(
-#             rating=rating,
-#             review=review,
-#             content_type=content_type,
-#             object_id=object_id
-#         )
-#         if content_type.model == 'foods':
-#             return HttpResponseRedirect(reverse('foods:main')) # Change this
-#         else:
-#             return HttpResponseRedirect(reverse('drinks:main')) # Change this
-        
-#     return render(request, 'review_form.html', {'object': obj})
+    if request.method == 'POST':
+        rating = request.POST.get('rating')
+        ulasan = request.POST.get('ulasan')
+        Review.objects.create(
+            user = request.user,
+            rating=rating,
+            ulasan=ulasan,
+            content_type=content_type,
+            object_id=object_id
+        )
+        if content_type.model == 'food':
+            return HttpResponseRedirect(reverse('foods:show_food'))
+        else:
+            return HttpResponseRedirect(reverse('drinks:main')) # Change this
+    form = ReviewForm()
+    return render(request, 'review_form.html', {'object': obj, 'form':form})
 
-# def get_reviews_json(request, content_type_id, object_id):
-#     content_type = get_object_or_404(ContentType, pk=content_type_id)
-#     if (content_type.model != 'foods') or (content_type.model != 'drinks'):
-#         return HttpResponseBadRequest("Invalid content type")
-#     reviews = Review.objects.filter(content_type=content_type, object_id=object_id)
-#     reviews_data = serializers.serialize('json', reviews)
-#     return JsonResponse({'reviews': reviews_data}, safe=False)
->>>>>>> origin/main
+def get_reviews_json(request, content_type, object_id):
+    content_type = ContentType.objects.get(model=content_type)
+    if content_type.model == 'food':
+        obj = get_object_or_404(Food, pk=object_id)
+    elif content_type.model == 'drink':
+        obj = get_object_or_404(Drink, pk=object_id)
+    else:
+        return HttpResponseBadRequest("Invalid content type")
+    reviews = Review.objects.filter(content_type=content_type, object_id=object_id)
+    reviews_data = serializers.serialize('json', reviews)
+    return JsonResponse({'reviews': reviews_data}, safe=False)
+
+def get_reviews_template(request, content_type, object_id):
+    content_type = ContentType.objects.get(model=content_type)
+    if content_type.model == 'food':
+        obj = get_object_or_404(Food, pk=object_id)
+    elif content_type.model == 'drink':
+        obj = get_object_or_404(Drink, pk=object_id)
+    else:
+        return HttpResponseBadRequest("Invalid content type")
+    reviews = Review.objects.filter(content_type=content_type, object_id=object_id)
+    return render(request, 'fnd_reviews.html', {'reviews': reviews})
+
+def get_all_reviews_template(request):
+    reviews = Review.objects.all()
+    return render(request, 'all_reviews.html', {'reviews': reviews})
