@@ -1,17 +1,18 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'reviews/css/star.css' %}">
 {% for item in data %}
-<a href="{% url 'foods:food_detail' item.pk %}">
-    <div class="max-w-md rounded overflow-hidden shadow-lg bg-white relative border" >
+    <div class="max-w-md rounded overflow-hidden shadow-lg bg-white relative border">
         <div class="px-4 md:px-6 py-4">
+            <a href="{% url 'foods:food_detail' item.pk %}">
+                <div class="md:text-xl text-[#005b9c] font-inter font-bold mb-2">
+                    {{ item.fields.product }}
+                </div>
+            </a>
+            <div class="stars-landing" id="stars-box" style="--rating: {{ item.fields.average_rating }};">★★★★★</div>
             <div class="md:text-xl text-[#005b9c] font-inter font-bold mb-2">
-                Product: {{ item.fields.product }}
-            </div>
-            <div class="md:text-xl text-[#005b9c] font-inter font-bold mb-2">
-                Rating: {{ item.fields.average_rating }}
-            </div>
             <div class="text-sm md:text-gray-600 mb-2">
-                Total Review: {{ item.fields.num_reviews }}
+                {{ item.fields.num_reviews }} reviews
             </div>
         </div>
     </div>
-</a>
 {% endfor %}
