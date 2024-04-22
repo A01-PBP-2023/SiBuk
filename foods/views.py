@@ -47,6 +47,12 @@ def add_food(request):
         return HttpResponse(b"CREATED", status=201)
     return HttpResponseNotFound()
 
+def add_to_favorites(request, food_id, user_id):
+    user = request.user.userprofile
+    food = get_object_or_404(Katalog, id=food_id)
+    user.cart.add(food)
+    return redirect('foods:show_favorites')
+
 def get_food(request):
     data = Food.objects.all()
     return HttpResponse(serializers.serialize("json", data), 
