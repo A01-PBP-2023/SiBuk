@@ -61,5 +61,13 @@ def get_reviews_template(request, content_type, object_id):
     return render(request, 'fnd_reviews.html', {'reviews': reviews})
 
 def get_all_reviews_template(request):
-    reviews = Review.objects.all()
-    return render(request, 'all_reviews.html', {'reviews': reviews})
+    data = []
+    foods = Food.objects.all()
+    for food in foods:
+        reviews = food.reviews.all()
+        data.append(reviews)
+    drinks = Drink.objects.all()
+    for drink in drinks:
+        reviews = drink.reviews.all()
+        data.append(reviews)
+    return render(request, 'all_reviews.html', {'reviews': data})
