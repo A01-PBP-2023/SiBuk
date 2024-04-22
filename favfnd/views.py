@@ -11,19 +11,12 @@ import datetime
 
 
 def show_favorites(request):
-    favfood = request.user.userprofile.favfood.all()
-    context = {
-        "favfood": favfood,
-    }
-    return render(request, 'favorites.html', context)
+    # favorite = request.user.food.all()
+    # return render(request, 'favorites.html')
+    # context = {
+    #     "favorite": favorite,
 
+    # }
 
-def show_json(request):
-    data = request.user.userprofile.favfood.all()
-    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
-
-def show_all_attributes(request):
-    return HttpResponse(User.values())
-
-
+    return render(request, 'favorites.html', )
 
