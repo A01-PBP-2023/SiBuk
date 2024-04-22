@@ -8,6 +8,7 @@
 {% endblock meta %}
 
 {% block content %}
+
 <div class="flex container items-center align-center mx-auto flex-col"> 
     <div class="filter-box">
         <form id="filterForm" class="filter-form" method="GET" onsubmit="submitFilterForm()">
@@ -40,7 +41,21 @@
                 </div>
               </div>
             </div>
-          </div>
+            <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="px-4 md:px-6 py-4">
+                <div class="md:text-xl text-[#005b9c] font-inter font-bold mb-2">
+                    {{ food.product }}
+                </div>
+                <div class="text-sm md:text-gray-600 mb-2">
+                    by {{ food.merchant_area }}
+                </div>
+                <div class="text-sm md:text-gray-600 mb-4">
+                    Category: {{ food.category }}
+                </div>
+            </div>
+        </div>
     {% endfor %}
     </div>
     {% endfor %}
