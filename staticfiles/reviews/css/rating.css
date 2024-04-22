@@ -1,0 +1,12 @@
+/* CSS for star rating */
+.rating {
+  display: inline-block;
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+/* Style for selected stars */
+.rating .star.selected {
+  color: #ffcc00;
+}

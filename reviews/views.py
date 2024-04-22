@@ -35,7 +35,7 @@ def review_FnD(request, content_type, object_id):
         if content_type.model == 'food':
             return HttpResponseRedirect(reverse('foods:show_food'))
         else:
-            return HttpResponseRedirect(reverse('drinks:main')) # Change this
+            return HttpResponseRedirect(reverse('drinks:main'))
     form = ReviewForm()
     return render(request, 'review_form.html', {'object': obj, 'form':form})
 
@@ -72,14 +72,15 @@ def get_all_reviews_partial(request):
     for food in foods:
         food_data = serializers.serialize('python', [food])[0]
         food_data['fields']['average_rating'] = food.reviews.aggregate(avg_rating=Avg('rating'))['avg_rating'] or 0
+        food_data['fields']['percentage_rating'] = food_data['fields']['average_rating']/5*100
         food_data['fields']['num_reviews'] = food.num_reviews
         data.append(food_data)
-        print(food_data)
 
     drinks = Drink.objects.prefetch_related('reviews').annotate(num_reviews=Count('reviews')).all()
     for drink in drinks:
         drink_data = serializers.serialize('python', [drink])[0]
         drink_data['fields']['average_rating'] = drink.reviews.aggregate(avg_rating=Avg('rating'))['avg_rating'] or 0
+        drink_data['fields']['percentage_rating'] = drink_data['fields']['average_rating']/5*100
         drink_data['fields']['num_reviews'] = drink.num_reviews
         data.append(drink_data)
 
