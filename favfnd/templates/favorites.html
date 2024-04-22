@@ -1,63 +1,32 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block meta %}
-    <title>Favorites | SiBUk</title>
-{% endblock meta %}
-
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block meta %}
+<title>Favorites | SiBuk</title>
+{% endblock meta %} {% block content %}
 <!--Menu-->
 
 <div class="menu" id="Menu">
-    <h1>Your<span>Favorites</span></h1>
+  <h1>Your<span>Favorites</span></h1>
 
-    <div class="menu_box">
-        <div class="menu_card">
-
-            
-
-            <div class="menu_info">
-                <h2>Buger</h2>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
-                </p>
-                <h3>$20.00</h3>
-                <div class="menu_icon">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-                <a href="#" class="menu_btn">Order Now</a>
-                <div class="trash_icon" > <i class="fa-solid fa-trash"></i></div>
-    
-            </div>
-
-        </div> 
-    </div>
-    
-    <!-- #### Card Item #### -->
-    <div class="card-box shadow-sm">
-        <div class="card-box-inner">
-          <div class="card-box-front d-flex gap-4">
-            <img
-              src="static/images/card-decoration.jpg"
-              class="card-decoration"
-              alt="card-decoration"
-            />
-            <div class="card-box-description">
-              <h5 class="card-box-title mt-4">Sample Text</h5>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, earum.
-              </p>
-            </div>
-          </div>
-          <div class="card-box-back">
-            <h2>Back Side</h2>
-          </div>
+  <div class="card-box ">
+    <div class="card-box-inner shadow-sm">
+      <div class="card-box-front d-flex gap-4">
+        {% load static %}
+        <img
+          src="{% static  'images/card-decoration.jpg' %}"
+          class="card-decoration"
+          alt="card-decoration"
+        />
+        <div class="card-box-description">
+          <h5 class="card-box-title mt-4">Sample Text</h5>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, earum.
+          </p>
         </div>
       </div>
-      <!-- #### Card Item #### -->
+      <div class="card-box-back">
+        <h2>Back Side</h2>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock content %}

@@ -9,8 +9,8 @@ class Food(models.Model):
         ('mie', 'Mie'),
         ('lainnya', 'Lainnya')
     ]
-    merchant_area = models.CharField(max_length=255)
-    merchant_name = models.CharField(max_length=255)
-    category = models.CharField(max_length=13, choices=FOOD_CHOICES)
-    product = models.CharField(max_length=255)
-    description = models.CharField(max_length=255)
+    merchant_area = models.CharField(max_length=255, null=True, blank=True)
+    merchant_name = models.CharField(max_length=255, null=True, blank=True)
+    category = models.CharField(max_length=13, choices=FOOD_CHOICES, null=True, blank=True)
+    product = models.CharField(max_length=255, null=True, blank=True)
+    description = models.CharField(max_length=255, null=True, blank=True)
