@@ -1,7 +1,9 @@
 :root {
+  --deep-green: #002315;
   --dark-green: #014d2f;
   --medium-green: #00862f;
-  --light-green: rgb(245, 255, 235);
+  --light-green: #f5ffeb;
+  --mustard-yellow: #ffdb58;
 }
 
 .navbar {
@@ -103,6 +105,11 @@
   transform: scale(1);
   transition: all 500ms;
   min-width: 250px;
+  text-decoration: none;
+}
+
+.feature-title {
+  color: var(--dark-green);
 }
 
 .feature-item:hover {
@@ -213,11 +220,45 @@
 
 
 
+footer {
+  padding: 40px 0;
+  background-color: var(--deep-green);
+  font-size: .85rem;
+  color: var(--light-green);
+}
+
+.footer-desc {
+  min-width: 200px;
+  max-width: 250px;
+  text-align: justify;
+}
+
+.footer-title {
+  color: var(--mustard-yellow);
+}
+
+.footer-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-list  a{
+  text-decoration: none;
+  color: #f5ffeb9e;
+}
+
+.footer-list a:hover {
+  color: var(--light-green);
+}
+
+.copyright-text {
+  color: #f5ffeb9e;
+}
+
+
+
 /* Responsiveness */
-
-
-
-
 
 @media (max-width: 918px) {
   .hero-container {
