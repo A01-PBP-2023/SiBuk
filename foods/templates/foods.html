@@ -7,6 +7,7 @@
 {% endblock meta %}
 
 {% block content %}
+
 <div class="flex container items-center align-center mx-auto flex-col"> 
     <div class="filter-box">
         <form id="filterForm" class="filter-form" method="GET" onsubmit="submitFilterForm()">
@@ -22,6 +23,9 @@
                 <a href="{% url 'foods:food_detail' food.id %}" class="see-details-button bg-[#3992C6] hover-bg-[#247FB8] text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                     See Details
                 </a>
+            </div>
+            <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
             </div>
             <div class="px-4 md:px-6 py-4">
                 <div class="md:text-xl text-[#005b9c] font-inter font-bold mb-2">
