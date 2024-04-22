@@ -23,5 +23,6 @@ urlpatterns = [
     path('reviews/<str:content_type>/<int:object_id>/', include("reviews.urls")),  
     path('', include('recommended.urls')),
     path('favorites/', include('favfnd.urls')),
-    path('api/foods/', include('foods.urls'))
-]
+    path('api/foods/', include('foods.urls')),
+    path('api/drinks/', include('drinks.urls'))
+    ]
