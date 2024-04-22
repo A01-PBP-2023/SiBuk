@@ -91,12 +91,7 @@
 <!-- Recommended Section -->
 <section class="recommended-container container-fluid">
   <h2 class="hero-title text-center">Explore Our Recommendation</h2>
-<<<<<<< HEAD
-  <div class="card-container m-4 p-4 d-flex flex-wrap gap-4 justify-content-center">
-    {% for foodItem in data %}
-=======
   <div class="card-container m-4 p-4 d-flex flex-wrap gap-4 justify-content-center" style="width: fit-content;">
->>>>>>> bf335e2 (test recommended)
     <!-- #### Card Item #### -->
     {% for food in data %}
     <div class="card-box">
@@ -108,19 +103,11 @@
             alt="card-decoration"
           />
           <div class="card-box-description">
-<<<<<<< HEAD
-            <h5 class="card-box-title mt-4" style="font-size: 1.25rem;">{{ foodItem.product.title }}</h5>
-            <div>
-              <p>{{ foodItem.merchant_area }}</p>
-              <p>{{ foodItem.merchant_name }}</p>
-            </div>
-=======
             <h5 class="card-box-title mt-4">{{food.product}}</h5>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. In,
               earum.
             </p>
->>>>>>> bf335e2 (test recommended)
           </div>
         </div>
       </div>
