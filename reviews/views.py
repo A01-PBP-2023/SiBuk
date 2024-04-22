@@ -8,15 +8,15 @@ from django.urls import reverse
 from .models import Review
 from .forms import ReviewForm
 from foods.models import Food
-# from drinks.models import Drink
+from drinks.models import Drink
 
 @login_required(login_url='/user_auth/login')
 def review_FnD(request, content_type, object_id):
     content_type = ContentType.objects.get(model=content_type)
     if content_type.model == 'food':
         obj = get_object_or_404(Food, pk=object_id)
-    # elif content_type.model == 'drink':
-    #     obj = get_object_or_404(Drink, pk=object_id)
+    elif content_type.model == 'drink':
+        obj = get_object_or_404(Drink, pk=object_id)
     else:
         return HttpResponseBadRequest("Invalid content type")
 
@@ -41,8 +41,8 @@ def get_reviews_json(request, content_type, object_id):
     content_type = ContentType.objects.get(model=content_type)
     if content_type.model == 'food':
         obj = get_object_or_404(Food, pk=object_id)
-    # elif content_type.model == 'drink':
-    #     obj = get_object_or_404(Drink, pk=object_id)
+    elif content_type.model == 'drink':
+        obj = get_object_or_404(Drink, pk=object_id)
     else:
         return HttpResponseBadRequest("Invalid content type")
     reviews = Review.objects.filter(content_type=content_type, object_id=object_id)
@@ -53,9 +53,13 @@ def get_reviews_template(request, content_type, object_id):
     content_type = ContentType.objects.get(model=content_type)
     if content_type.model == 'food':
         obj = get_object_or_404(Food, pk=object_id)
-    # elif content_type.model == 'drink':
-    #     obj = get_object_or_404(Drink, pk=object_id)
+    elif content_type.model == 'drink':
+        obj = get_object_or_404(Drink, pk=object_id)
     else:
         return HttpResponseBadRequest("Invalid content type")
     reviews = Review.objects.filter(content_type=content_type, object_id=object_id)
     return render(request, 'fnd_reviews.html', {'reviews': reviews})
+
+def get_all_reviews_template(request):
+    reviews = Review.objects.all()
+    return render(request, 'all_reviews.html', {'reviews': reviews})
