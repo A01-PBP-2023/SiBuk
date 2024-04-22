@@ -1,61 +1,47 @@
-{% extends "base.html" %} {% load static %} {% block meta %}
-<title>Food | SiBuk</title>
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
-  rel="stylesheet"
-/>
-<link rel="stylesheet" href="/static/css/style.css" />
-{% endblock meta %} {% block content %}
-<div
-  class="flex container items-center align-center mx-auto flex-col mt-4"
-  style="margin-bottom: 10em"
->
-  <div class="filter-box">
-    <form
-      id="filterForm"
-      class="filter-form"
-      method="GET"
-      onsubmit="submitFilterForm()"
-    >
-      {{ form.as_p }}
-      <button type="submit" class="filter-btn">Filter</button>
-    </form>
-  </div>
+{% extends "base.html" %}
+{% load static %}
 
-  <div class="d-flex flex-wrap gap-4 justify-content-center mt-4">
+{% block meta %}
+    <title>Food | SiBuk</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+{% endblock meta %}
+
+{% block content %}
+<div class="flex container items-center align-center mx-auto flex-col"> 
+    <div class="filter-box">
+        <form id="filterForm" class="filter-form" method="GET" onsubmit="submitFilterForm()">
+            {{ form.as_p }}
+            <button type="submit" class="filter-btn">Filter</button>
+        </form>            
+    </div>
+
+    <div class="d-flex flex-wrap gap-4">
     {% for food in foods %}
-    <div class="card-box">
-      <div class="card-box-inner shadow-sm">
-        <div class="card-box-front d-flex gap-4">
-          <img
-            src="{% static  'images/card-decoration.jpg' %}"
-            class="card-decoration"
-            alt="card-decoration"
-          />
-          <div class="card-box-description">
-            <h5 class="card-box-title mt-4">{{ food.product.title }}</h5>
-            <div>
-              <p>{{ food.merchant_area.title }}</p>
-              <p>{{ food.merchant_name }}</p>
-            </div>
-            <div class="relative">
-              <a
-                href="{% url 'foods:food_detail' food.id %}"
-                class="btn btn-success"
-                style="background-color: #014d2f"
-              >
-                See Details
-              </a>
+        <div class="card-box">
+            <div class="card-box-inner shadow-sm">
+              <div class="card-box-front d-flex gap-4">
+                <img
+                  src="{% static  'images/card-decoration.jpg' %}"
+                  class="card-decoration"
+                  alt="card-decoration"
+                />
+                <div class="card-box-description">
+                  <h5 class="card-box-title mt-4" style="font-size: 1.25rem;">{{ food.product.title }}</h5>
+                  <div>
+                    <p>{{ food.merchant_area }}</p>
+                    <p>{{ food.merchant_name }}</p>
+                  </div>
+                  <div class="relative">
+                    <a href="{% url 'foods:food_detail' food.id %}" class="see-details-button bg-[#3992C6] hover-bg-[#247FB8] text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        See Details
+                    </a>
+                </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div
-            class="small_heart"
-            onclick=`window.location.href = "{% url 'foods:add_to_favorites' food.id user.id %}"`
-          >
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </div>
-      </div>
+    {% endfor %}
     </div>
     {% endfor %}
   </div>
