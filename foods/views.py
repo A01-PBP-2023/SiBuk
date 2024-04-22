@@ -12,13 +12,10 @@ def show_food(request):
 
     if form.is_valid():
         category = form.cleaned_data.get("category")
-        merchant_area = form.cleaned_data.get("merchant_area")
 
         if category:
             foods = foods.filter(category=category)
 
-        if merchant_area:
-            foods = foods.filter(merchant_area__icontains=merchant_area)
 
     context = {
         'form': form,
@@ -59,13 +56,10 @@ def get_food_by_id(request, id):
 @csrf_exempt
 def filter_foods(request):
     category = request.GET.get('category', '')
-    merchant_area = request.GET.get('merchant_area', '')
 
     foods = Food.objects.all()
     if category:
         foods = foods.filter(category=category)
-    if merchant_area:
-        foods = foods.filter(merchant_area__icontains=merchant_area)
 
     foods_json = serializers.serialize('json', foods)
     return JsonResponse(foods_json, safe=False)
