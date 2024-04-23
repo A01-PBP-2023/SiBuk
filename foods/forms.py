@@ -2,7 +2,7 @@ from django import forms
 from .models import Food
 
 class FoodFilterForm(forms.Form):
-    category = forms.ChoiceField(choices=Food.FOOD_CHOICES, required=False)
+    category = forms.CharField(required=False, widget=forms.TextInput(attrs={'placeholder': 'Category'}))
 
 class AddFoodForm(forms.ModelForm):
     class Meta:
