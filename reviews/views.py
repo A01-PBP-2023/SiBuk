@@ -13,7 +13,7 @@ from foods.models import Food
 from drinks.models import Drink
 
 @login_required(login_url='/user_auth/login')
-def review_FnD(request, content_type, object_id):
+def review_fnd(request, content_type, object_id):
     content_type = ContentType.objects.get(model=content_type)
     if content_type.model == 'food':
         obj = get_object_or_404(Food, pk=object_id)
@@ -38,6 +38,31 @@ def review_FnD(request, content_type, object_id):
             return HttpResponseRedirect(reverse('drinks:main'))
     form = ReviewForm()
     return render(request, 'review_form.html', {'object': obj, 'form':form})
+
+def review_fnd_ajax(request, content_type, object_id):
+    content_type = ContentType.objects.get(model=content_type)
+    if (content_type.model != 'food') and (content_type.model == 'drink'):
+        return HttpResponseBadRequest("Invalid content type")
+    
+    if request.method == 'POST':
+        if request.user.is_authenticated:
+            rating = request.POST.get('rating')
+            ulasan = request.POST.get('ulasan')
+            Review.objects.create(
+                user=request.user,
+                rating=rating,
+                ulasan=ulasan,
+                content_type=content_type,
+                object_id=object_id
+            )
+            if content_type.model == 'food':
+                return JsonResponse({'success': True, 'redirect_url': reverse('foods:show_food')})
+            else:
+                return JsonResponse({'success': True, 'redirect_url': reverse('drinks:main')})
+        else:
+            return JsonResponse({'success': False, 'login_required': True})
+
+    return JsonResponse({'success': False, 'error': 'Invalid request method'})
 
 def get_reviews_json(request, content_type, object_id):
     content_type = ContentType.objects.get(model=content_type)
