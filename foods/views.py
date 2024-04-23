@@ -12,13 +12,10 @@ def show_food(request):
 
     if form.is_valid():
         category = form.cleaned_data.get("category")
-        merchant_area = form.cleaned_data.get("merchant_area")
 
         if category:
             foods = foods.filter(category=category)
 
-        if merchant_area:
-            foods = foods.filter(merchant_area__icontains=merchant_area)
 
     context = {
         'form': form,
@@ -47,6 +44,12 @@ def add_food(request):
         return HttpResponse(b"CREATED", status=201)
     return HttpResponseNotFound()
 
+def add_to_favorites(request, food_id, user_id):
+    user = request.user.userprofile
+    food = get_object_or_404(Katalog, id=food_id)
+    user.cart.add(food)
+    return redirect('foods:show_favorites')
+
 def get_food(request):
     data = Food.objects.all()
     return HttpResponse(serializers.serialize("json", data), 
@@ -59,13 +62,10 @@ def get_food_by_id(request, id):
 @csrf_exempt
 def filter_foods(request):
     category = request.GET.get('category', '')
-    merchant_area = request.GET.get('merchant_area', '')
 
     foods = Food.objects.all()
     if category:
         foods = foods.filter(category=category)
-    if merchant_area:
-        foods = foods.filter(merchant_area__icontains=merchant_area)
 
     foods_json = serializers.serialize('json', foods)
     return JsonResponse(foods_json, safe=False)
