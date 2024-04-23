@@ -2,14 +2,17 @@
 {% load static %}
 
 {% block content %}
-<div class="grid grid-cols-2 md:grid-cols-5 gap-4 px-4 md:px-0"></div>
-    <select id="sort-by-dropdown">
-        <option value="reviews">Sort by Number of Reviews</option>
-        <option value="rating">Sort by Rating</option>
-    </select>
-</div>
-<div id="review-container" class="grid grid-cols-2 md:grid-cols-5 gap-4 px-4 md:px-0">
-    <!-- Will be filled with partial html -->
+<div class="flex container items-center align-center mx-auto flex-col">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 px-4 md:px-0"></div>
+        <select id="sort-by-dropdown">
+            <option value="reviews">Sort by Number of Reviews</option>
+            <option value="rating">Sort by Rating</option>
+        </select>
+    </div>
+
+    <div id="review-container" class="d-flex flex-wrap gap-4 justify-content-center mt-4">
+        <!-- Will be filled with partial html -->
+    </div>
 </div>
 
 <script>
