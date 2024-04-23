@@ -58,7 +58,7 @@ def review_fnd_ajax(request, content_type, object_id):
             if content_type.model == 'food':
                 return JsonResponse({'success': True, 'redirect_url': reverse('foods:show_food')})
             else:
-                return JsonResponse({'success': True, 'redirect_url': reverse('drinks:show_drink')})
+                return JsonResponse({'success': True, 'redirect_url': reverse('drinks:main')})
         else:
             return JsonResponse({'success': False, 'login_required': True})
 
