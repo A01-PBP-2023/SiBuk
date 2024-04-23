@@ -35,7 +35,7 @@ def review_fnd(request, content_type, object_id):
         if content_type.model == 'food':
             return HttpResponseRedirect(reverse('foods:show_food'))
         else:
-            return HttpResponseRedirect(reverse('drinks:main'))
+            return HttpResponseRedirect(reverse('drinks:show_drink'))
     form = ReviewForm()
     return render(request, 'review_form.html', {'object': obj, 'form':form})
 
@@ -58,7 +58,7 @@ def review_fnd_ajax(request, content_type, object_id):
             if content_type.model == 'food':
                 return JsonResponse({'success': True, 'redirect_url': reverse('foods:show_food')})
             else:
-                return JsonResponse({'success': True, 'redirect_url': reverse('drinks:main')})
+                return JsonResponse({'success': True, 'redirect_url': reverse('drinks:show_drink')})
         else:
             return JsonResponse({'success': False, 'login_required': True})
 
