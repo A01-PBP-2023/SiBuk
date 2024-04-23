@@ -7,25 +7,20 @@
 {% endblock meta %} 
 
 {% block content %}
-<!-- review_form.html -->
 <form id="review-form" method="post">
   {% csrf_token %}
-  <!-- Star rating input -->
   <div class="rating">
     <span class="star" data-value="1">&#9733;</span>
     <span class="star" data-value="2">&#9733;</span>
     <span class="star" data-value="3">&#9733;</span>
     <span class="star" data-value="4">&#9733;</span>
     <span class="star" data-value="5">&#9733;</span>
-    <!-- Hidden input field to store the selected rating value -->
     <input type="hidden" id="id_rating" name="rating">
   </div>
-  <!-- Review comment textarea -->
   <div class="form-group">
     <label for="id_ulasan">Review:</label>
     <textarea class="form-control" id="id_ulasan" name="ulasan" rows="3"></textarea>
   </div>
-  <!-- Submit button -->
   <button type="submit" class="btn btn-outline-success">Submit Review</button>
 </form>
 
@@ -37,8 +32,6 @@
 </ul>
 {% endif %}
 
-
-<!-- JavaScript/jQuery code for star rating -->
 <script>
   $(document).ready(function() {
     $('.star').click(function() {
