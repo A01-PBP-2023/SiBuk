@@ -260,6 +260,20 @@
     font-size: 1.25rem;
    }
 
+  .small_card {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.25rem;
+   }
+
+  .small_card {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.25rem;
+   }
+
 /* Favorites */
 .favorite-item {
   width: fit-content;
