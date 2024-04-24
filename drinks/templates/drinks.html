@@ -10,6 +10,7 @@
 <div class="flex container items-center align-center mx-auto flex-col"> 
     <div class="filter-box">
         <form id="filterForm" class="filter-form" method="GET" onsubmit="submitFilterForm()">
+            {{ form.as_p }}
             <button type="submit" class="filter-btn">Filter</button>
         </form>            
     </div>
@@ -18,7 +19,7 @@
     {% for drink in drinks %}
         <div class="max-w-md rounded overflow-hidden shadow-lg bg-white relative border">
             <div class="relative">
-                <a class="see-details-button bg-[#3992C6] hover-bg-[#247FB8] text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                <a href="{% url 'drinks:drink_detail' drink.id %}" class="see-details-button bg-[#3992C6] hover-bg-[#247FB8] text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                     See Details
                 </a>
             </div>
