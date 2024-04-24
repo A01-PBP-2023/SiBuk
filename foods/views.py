@@ -35,14 +35,14 @@ def food_detail(request, food_id):
 @csrf_exempt
 def add_food(request):
     if request.method == "POST":
-        merchant_area = request.POST.get('merchant_area')
-        merchant_name = request.POST.get('merchant_name')
+        merchant_area = request.POST.get('Merchant_area')
         category = request.POST.get('category')
         product = request.POST.get('product')
         description = request.POST.get('description')
+        image = request.POST.get('Image')
 
-        new_food = Food(merchant_area=merchant_area, merchant_name=merchant_name, category=category, product=product,
-                        description=description)
+        new_food = Food(merchant_area=merchant_area, category=category, product=product,
+                        description=description, Image=image)
         new_food.save()
         return HttpResponse(b"CREATED", status=201)
     return HttpResponseNotFound()
