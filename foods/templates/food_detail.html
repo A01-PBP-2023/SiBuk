@@ -22,7 +22,7 @@
                 <p><strong>Product Description:</strong> {{ food.description }}</p>
                 <p><strong>Category:</strong> {{ food.category }}</p>
                 <button type="button" onclick="window.location.href = `{% url 'foods:show_food' %}` " class="btn btn-outline-success">Back to Food</button>
-                <button id="reviewButton" data-content-type-id="food" data-object-id="{{ food.pk }}" class="btn btn-outline-warning">Review</button>
+                <button id="reviewButton" data-content-type-id="food" data-object-id="{{ food.pk }}," class="btn btn-outline-warning">Review</button>
 
               </div>
             </div>
@@ -32,12 +32,66 @@
    
 </div>
 
+<<<<<<< HEAD
 
 <script src="{% static 'food/js/reviewFood.js' %}"></script>
+=======
+<div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      {% include 'review_modal.html' %}
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const reviewButton = document.getElementById("reviewButton");
+  const reviewModal = $('#reviewModal');
+
+  function showModal() {
+    reviewModal.modal('show');
+  }
+
+  function hideModal() {
+    reviewModal.modal('hide');
+  }
+
+  reviewButton.addEventListener("click", showModal);
+  reviewModal.on('click', '.close', hideModal);
+  reviewModal.on('click', '#close-modal', hideModal);
+
+  reviewModal.on('submit', '#review-form', function(event) {
+    event.preventDefault();
+    const formData = $(this).serialize();
+    $.ajax({
+      type: 'POST',
+      url: '{% url "reviews:review_fnd_ajax" content_type="food" object_id=food.pk %}',
+      data: formData,
+      dataType: 'json',
+      success: function(response) {
+        if (response.login_required) {
+            window.location.href = '{% url "user_auth:login" %}';
+        } else if(response.success) {
+            window.location.href = response.redirect_url;
+        } else {
+          console.error('Submission failed:', response.error);
+        }
+      },
+      error: function(xhr, status, error) {
+        console.error('Error:', xhr.responseText);
+      }
+    });
+  });
+
+});
+</script>
+
+
+>>>>>>> origin/reviews
 {% endblock content %}
 
 {% block script %}
-</script>
 <script src="/static/js/nav_script.js"></script>
 <script src="/static/js/modal_food.js"></script>
 {% endblock script %}

@@ -200,8 +200,7 @@
 
   .card-box-title {
     color: var(--dark-green);
-    font-size: 18px;
-    max-width: 200px;
+    font-size: 30px;
   }
 
   .card-box .nav-btn-custom {
@@ -232,6 +231,51 @@
     right: 20px;
     font-size: 1.25rem;
    }
+<<<<<<< HEAD
+=======
+
+  .small_card {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.25rem;
+   }
+
+  .small_card {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.25rem;
+   }
+
+  .small_card {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.25rem;
+   }
+
+  .small_card {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.25rem;
+   }
+
+  .small_card {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.25rem;
+   }
+
+  .small_card {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.25rem;
+   }
+>>>>>>> origin/reviews
 
 /* Favorites */
 .favorite-item {
@@ -280,6 +324,7 @@ footer {
   color: #f5ffeb9e;
 }
 
+<<<<<<< HEAD
 .login-left-side .copyright-text {
   position: absolute;
   left: 50%;
@@ -399,6 +444,14 @@ input,select {
   top: 10px;
   right: 10px;
   font-size: 20px;
+=======
+.small_heart {
+  position: absolute;
+  color: grey;
+  bottom: 10px;
+  right: 10px;
+  font-size: 30px;
+>>>>>>> origin/reviews
 }
 
 .small_heart:hover {
