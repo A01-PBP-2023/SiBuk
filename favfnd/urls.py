@@ -5,4 +5,4 @@ app_name = 'favfnd'
 
 urlpatterns = [
     path('', show_favorites, name='show_favorites'),
-] 
+]
