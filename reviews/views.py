@@ -119,5 +119,5 @@ def get_all_reviews_partial(request):
 
     # Render the template with the data
     html_content = render_to_string('partial_all_reviews.html', {'data': data})
-
     return JsonResponse({'html_content': html_content})
+

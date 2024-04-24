@@ -3,11 +3,14 @@ from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
 from django.shortcuts import redirect, render, get_object_or_404
 from .models import Food
 from .forms import FoodFilterForm
+from user_auth.models import UserProfile
 from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 
 def show_food(request):
+    user = request.user
     foods = Food.objects.all()
+    user_profile = UserProfile.objects.get(user=user)
     form = FoodFilterForm(request.GET)
 
     if form.is_valid():
