@@ -6,11 +6,11 @@ from .forms import FoodFilterForm
 from user_auth.models import UserProfile
 from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import permission_required
+
 
 def show_food(request):
-    user = request.user
     foods = Food.objects.all()
-    user_profile = UserProfile.objects.get(user=user)
     form = FoodFilterForm(request.GET)
 
     if form.is_valid():
@@ -33,6 +33,7 @@ def food_detail(request, food_id):
     return render(request, 'food_detail.html', context)
 
 @csrf_exempt
+@permission_required("food.add_food")
 def add_food(request):
     if request.method == "POST":
         merchant_area = request.POST.get('merchant_area')
