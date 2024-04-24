@@ -12,9 +12,10 @@
 
 
 
-<!-- #### Card Item #### -->
 
 <div class="container-fluid m-4 pt-5">
+  {% comment %} Card Item {% endcomment %}
+  {% for item in favfood %}
   <div class="card-box">
     <div class="card-box-inner shadow-sm">
       <div class="card-box-front d-flex gap-4">
@@ -28,7 +29,7 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star-half-stroke"></i>
           </div>
-          <h5 class="card-box-title ">Burger</h5>
+          <h5 class="card-box-title ">{{item.product}}</h5>
           <div>
             <p>Jakarta</p>
             <p>Mie Gacoan</p>
@@ -45,6 +46,8 @@
       </div>
     </div>
   </div>
+  {% endfor %}
+  {% comment %} Card Item {% endcomment %}
 </div>
 
 {% endblock content %}
