@@ -23,16 +23,27 @@
             <div class="card-box-inner shadow-sm">
               <div class="card-box-front d-flex gap-4">
                 <img
-                  src="{% static  'images/card-decoration.jpg' %}"
+                {% if food.category == "Nasi" %}
+                  src="{% static  'images/foods/rice.png' %}"
+                {% elif food.category == "Mie" %}
+                  src="{% static  'images/foods/noodle.png' %}"
+                {% elif food.category == "Snack" %}
+                  src="{% static  'images/foods/snack.png' %}"
+                {% else %}
+                  src="{% static  'images/foods/other.png' %}"
+              {% endif %}
                   class="card-decoration"
                   alt="card-decoration"
                 />
                 <div class="card-box-description">
-                  <h5 class="card-box-title mt-4" style="font-size: 1.25rem;">{{ food.product.title }}</h5>
+                  <h5 class="card-box-title mt-4">{{ food.product.title }}</h5>
                   <div>
                     <p>{{ food.merchant_area.title }}</p>
                     <p>{{ food.merchant_name }}</p>
                   </div>
+                  <div class="small_heart">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
                   <div class="relative">
                     <a href="{% url 'foods:food_detail' food.id %}" class="btn btn-success" >
                         See Details
@@ -44,7 +55,7 @@
           </div>
     {% endfor %}
     </div>
-    {% endfor %}
+   
   </div>
 </div>
 {% endblock content %}
