@@ -28,7 +28,8 @@
 
 .recommended-container {
   padding-top: 50px;
-  padding-bottom: 500px;
+  padding-bottom: 50px;
+  height: 100%;
   background-color: var(--light-green);
 }
 
@@ -38,7 +39,6 @@
   background: rgb(245, 255, 235);
   font-weight: 700;
 }
-
 
 .hero-container {
   display: flex;
@@ -52,8 +52,6 @@
 .hero-image-container {
   order: 2;
 }
-
-
 
 .hero-title {
   color: var(--dark-green);
@@ -72,9 +70,6 @@
   align-items: center;
   gap: 1em;
 }
-
-
-
 
 .hero-item-desc {
   color: var(--medium-green);
@@ -173,39 +168,40 @@
 }
 
 .card-box {
-    background-color: transparent;
-    width: 400px;
-    height: 199px;
-    transform: scale(1);
-    transition: 500ms all;
-    border-radius: 10px;
-    perspective: 1000px; 
-    cursor: pointer;
-  }
+  background-color: transparent;
+  width: 400px;
+  height: 199px;
+  transform: scale(1);
+  transition: 500ms all;
+  border-radius: 10px;
+  perspective: 1000px;
+  cursor: pointer;
+}
 
 .card-box:hover {
-    transform: scale(1.05);
-    transform: translateY(-0.5em);
-    transition: 500ms all;
+  transform: scale(1.05);
+  transform: translateY(-0.5em);
+  transition: 500ms all;
 }
-  .card-box-front {
-    background-color: white;
-    border-radius: 10px;
-  }
+.card-box-front {
+  background-color: white;
+  border-radius: 10px;
+}
 
-  .card-box-description {
-    text-align: left;
-  }
+.card-box-description {
+  text-align: left;
+}
 
-   .card-decoration {
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
-      height: 100%;
-  }
+.card-decoration {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 100%;
+}
 
   .card-box-title {
     color: var(--dark-green);
-    font-size: 30px;
+    font-size: 18px;
+    max-width: 200px;
   }
 
   .card-box .nav-btn-custom {
@@ -219,9 +215,23 @@
    bottom: 10px;
   }
 
-  .trash_icon :hover{
-    color: grey;
-  }
+.trash_icon :hover {
+  color: grey;
+}
+
+  .small_card {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.25rem;
+   }
+
+  .small_card {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.25rem;
+   }
 
   .small_card {
     position: absolute;
@@ -248,16 +258,11 @@
   color: orange;
 }
 
-
-
-
-
 footer {
-  margin-top: 50%;
+  overflow: hidden;
   background-color: var(--deep-green);
-  font-size: .85rem;
+  font-size: 0.85rem;
   color: var(--light-green);
-  margin-top: 50%;
 }
 
 .footer-desc {
@@ -276,7 +281,7 @@ footer {
   padding: 0;
 }
 
-.footer-list  a{
+.footer-list a {
   text-decoration: none;
   color: #f5ffeb9e;
 }
@@ -289,12 +294,125 @@ footer {
   color: #f5ffeb9e;
 }
 
+.login-left-side .copyright-text {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  color: grey;
+}
+
+.login-container {
+  background: rgb(0, 35, 21);
+  background: linear-gradient(
+    180deg,
+    rgba(1, 77, 47, 1) 0%,
+    rgba(0, 134, 47, 1) 100%
+  );
+}
+
+.register-right-title {
+  color: var(--dark-green);
+}
+
+.register-right-desc {
+  color: var(--dark-green);
+}
+
+.login {
+  border-radius: 10px;
+
+}
+
+.login-left-side {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.login-left-side {
+  background: #E5FAED;
+}
+
+.login-right-side {
+  width: 35%;
+}
+
+.register-title {
+  color: var(--dark-green);
+  font-size: 64px;
+}
+
+
+.register-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: var(--dark-green);
+  font-size: 1.5rem;
+}
+
+.reg-right-title {
+  font-size: 32px;
+}
+
+.reg-right-title, .reg-right-desc {
+  color: var(--dark-green);
+}
+
+input,select {
+  width: 100%;
+  padding: .5em 1em;
+  border: 1px solid rgba(128, 128, 128, 0.516);
+  border-radius: 5px;
+}
+
+
+.error-focus {
+  border: 2px solid red;
+}
+
+.error-focus:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.login-btn {
+  padding: .45em 0;
+  border-radius: 5px;
+  background: var(--dark-green);
+  color: white;
+  border: none;
+}
+
+.register-btn {
+  color: var(--medium-green);
+}
+
+.register-btn:hover {
+  color: var(--dark-green);
+}
+
+.messages {
+  font-size: 13px;
+  color: red;
+}
+
+.error-message {
+  outline: none;
+  color: red;
+}
+
+
+
+
+
+
+
 .small_heart {
   position: absolute;
   color: grey;
-  bottom: 10px;
+  top: 10px;
   right: 10px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .small_heart:hover {
@@ -311,7 +429,7 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  
+
   .hero-items {
     width: fit-content;
   }
@@ -328,7 +446,7 @@ footer {
   .hero-content-container {
     order: 2;
   }
-  
+
   .hero-image-container {
     order: 1;
   }
@@ -337,7 +455,5 @@ footer {
     .hero-image {
       max-width: 300px;
     }
-    
   }
-  
 }

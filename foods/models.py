@@ -1,6 +1,7 @@
 from django.db import models
 from reviews.models import Review
 from django.contrib.contenttypes.fields import GenericRelation
+from django.utils.translation import gettext as _
 
 # Create your models here.
 class Food(models.Model):

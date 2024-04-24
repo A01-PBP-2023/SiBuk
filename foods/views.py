@@ -3,11 +3,14 @@ from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
 from django.shortcuts import redirect, render, get_object_or_404
 from .models import Food
 from .forms import FoodFilterForm
+from user_auth.models import UserProfile
 from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 
 def show_food(request):
+    user = request.user
     foods = Food.objects.all()
+    user_profile = UserProfile.objects.get(user=user)
     form = FoodFilterForm(request.GET)
 
     if form.is_valid():
@@ -46,9 +49,9 @@ def add_food(request):
 
 def add_to_favorites(request, food_id, user_id):
     user = request.user.userprofile
-    food = get_object_or_404(Katalog, id=food_id)
-    user.cart.add(food)
-    return redirect('foods:show_favorites')
+    food = get_object_or_404(Food, id=food_id)
+    user.favfood.add(food)
+    return redirect('foods:show_food')
 
 def get_food(request):
     data = Food.objects.all()
