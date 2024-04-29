@@ -178,9 +178,13 @@
   }
 
 .card-box:hover {
-    transform: scale(1.05);
-    transform: translateY(-0.5em);
-    transition: 500ms all;
+  transform: scale(1.05);
+  transform: translateY(-0.5em);
+  transition: 500ms all;
+}
+.card-box-front {
+  background-color: white;
+  border-radius: 10px;
 }
   .card-box-front {
     background-color: white;
@@ -188,9 +192,9 @@
     height: 200px;
   }
 
-  .card-box-description {
-    text-align: left;
-  }
+.card-box-description {
+  text-align: left;
+}
 
    .card-decoration {
       border-top-left-radius: 10px;
@@ -287,12 +291,8 @@
   color: orange;
 }
 
-
-
-
-
 footer {
-  margin-top: 50%;
+  overflow: hidden;
   background-color: var(--deep-green);
   font-size: 0.85rem;
   color: var(--light-green);
