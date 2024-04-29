@@ -92,7 +92,7 @@
 <section class="recommended-container container-fluid">
   <h2 class="hero-title text-center">Explore Our Recommendation</h2>
   <div class="card-container m-4 p-4 d-flex flex-wrap gap-4 justify-content-center">
-    {% for foodItem in data %}
+    {% for foodItem in food %}
     <!-- #### Card Item #### -->
     <div class="card-box">
       <div class="card-box-inner shadow-sm">
@@ -103,10 +103,42 @@
             alt="card-decoration"
           />
           <div class="card-box-description">
-            <h5 class="card-box-title mt-4" style="font-size: 1.25rem;">{{ foodItem.product.title }}</h5>
+            <h5 class="card-box-title mt-4" style="font-size: 1.25rem;">{{ foodItem.fields.product.title }}</h5>
             <div>
-              <p>{{ foodItem.merchant_area }}</p>
-              <p>{{ foodItem.merchant_name }}</p>
+              <p>{{ foodItem.fields.merchant_area }}</p>
+              <p>{{ foodItem.fields.merchant_name }}</p>
+            </div>
+            <div class="relative">
+              <a href="{% url 'foods:food_detail' foodItem.pk %}" class="btn btn-success" style="background-color: #014d2f;">
+                  See Details
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    <!-- #### Card Item #### -->
+    {% for drinkItem in drink %}
+    <!-- #### Card Item #### -->
+    <div class="card-box">
+      <div class="card-box-inner shadow-sm">
+        <div class="card-box-front d-flex gap-4">
+          <img
+            src="{% static  'images/card-decoration.jpg' %}"
+            class="card-decoration"
+            alt="card-decoration"
+          />
+          <div class="card-box-description">
+            <h5 class="card-box-title mt-4" style="font-size: 1.25rem;">{{ drinkItem.fields.product.title }}</h5>
+            <div>
+              <p>{{ drinkItem.fields.merchant_area }}</p>
+              <p>{{ drinkItem.fields.merchant_name }}</p>
+            </div>
+            <div class="relative">
+              <a href="{% url 'foods:food_detail' drinkItem.pk %}" class="btn btn-success" style="background-color: #014d2f;">
+                  See Details
+              </a>
             </div>
           </div>
         </div>

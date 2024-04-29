@@ -24,28 +24,38 @@
 
   <div class="d-flex flex-wrap gap-4 justify-content-center mt-4">
     {% for food in foods %}
-    <div class="card-box">
-      <div class="card-box-inner shadow-sm">
-        <div class="card-box-front d-flex gap-4">
-          <img
-            src="{% static  'images/card-decoration.jpg' %}"
-            class="card-decoration"
-            alt="card-decoration"
-          />
-          <div class="card-box-description">
-            <h5 class="card-box-title mt-4">{{ food.product.title }}</h5>
-            <div>
-              <p>{{ food.merchant_area.title }}</p>
-              <p>{{ food.merchant_name }}</p>
-            </div>
-            <div class="relative">
-              <a
-                href="{% url 'foods:food_detail' food.id %}"
-                class="btn btn-success"
-                style="background-color: #014d2f"
-              >
-                See Details
-              </a>
+        <div class="card-box">
+            <div class="card-box-inner shadow-sm">
+              <div class="card-box-front d-flex gap-4">
+                <img
+                {% if food.category == "Nasi" %}
+                  src="{% static  'images/foods/rice.png' %}"
+                {% elif food.category == "Mie" %}
+                  src="{% static  'images/foods/noodle.png' %}"
+                {% elif food.category == "Snack" %}
+                  src="{% static  'images/foods/snack.png' %}"
+                {% else %}
+                  src="{% static  'images/foods/other.png' %}"
+              {% endif %}
+                  class="card-decoration"
+                  alt="card-decoration"
+                />
+                <div class="card-box-description">
+                  <h5 class="card-box-title mt-4">{{ food.product.title }}</h5>
+                  <div>
+                    <p>{{ food.merchant_area.title }}</p>
+                    <p>{{ food.merchant_name }}</p>
+                  </div>
+                  <div class="small_heart">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                  <div class="relative">
+                    <a href="{% url 'foods:food_detail' food.id %}" class="btn btn-success" >
+                        See Details
+                    </a>
+                </div>
+                </div>
+              </div>
             </div>
           </div>
           <div
