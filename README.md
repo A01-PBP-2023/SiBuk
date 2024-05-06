@@ -53,3 +53,8 @@ Dari dataset tersebut akan diambil data makanan dan minuman dengan perbandingan 
 ## 🧑‍💻 Role/Peran Pengguna
 Terdapat dua peran pada aplikasi ini, yaitu admin dan user. Setiap peran memiliki keterbatasan dan keleluasaan akses masing-masing. Admin dapat menambahkan list makanan/minuman dan memfilter review makanan/minuman yang diberikan oleh user. User dapat mengakses list makanan dan minuman, mengakses list rekomendasi makanan dan minuman, menambahkan makanan/minuman ke dalam list favorit, dan juga memberikan review terhadap suatu makanan/minuman.
 
+## Alur Pengintegrasian
+* Membuat model class yang sesuai dengan response dan request dari dan ke backend dan frontend dan mengirimkannya menggunakan tipe JSON
+* Menambahkan package yang dibutuhkan untuk komunkasi antar backend dan frontend, seperti package http untuk flutter dan package django-cors-header untuk menerima form input dari frontend
+* Menggunakan platform PWS untuk deployment backend dan frontend. Nantinya, endpoint API yang dipanggil oleh frontend akan berada pada PWS juga
+* Menggunakan async untuk beberapa fitur agar user selalu berinteraksi
