@@ -6,24 +6,24 @@ function submitFilterForm() {
     form.submit();
   }
 
-  async function showAddFoodModal() {
+  async function showAddDrinkModal() {
     document.querySelector("#modal").classList.remove("hidden");
   
     document.getElementById("confirm-modal").onclick = async function () {
-        await addFood();
+        await addDrink();
         closeModal();
     };
   }
 
-  async function addFood() {
+  async function addDrink() {
     const form = new FormData(document.querySelector("#form"));
-    const response = await fetch("/foods/add_food/", {
+    const response = await fetch("/foods/add_drink/", {
       method: "POST",
       body: form,
     });
   
     if (!response.ok) {
-      throw new Error("Failed to add food");
+      throw new Error("Failed to add drink");
     }
     return false;
   }
