@@ -182,10 +182,7 @@
   transform: translateY(-0.5em);
   transition: 500ms all;
 }
-.card-box-front {
-  background-color: white;
-  border-radius: 10px;
-}
+
   .card-box-front {
     background-color: white;
     border-radius: 10px;
@@ -224,54 +221,115 @@
   color: grey;
 }
 
-  .small_card {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.25rem;
-   }
 
-  .small_card {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.25rem;
-   }
 
-  .small_card {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.25rem;
-   }
 
-  .small_card {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.25rem;
-   }
+.login-left-side .copyright-text {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  color: grey;
+}
 
-  .small_card {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.25rem;
-   }
+.login-container {
+  background: rgb(0, 35, 21);
+  background: linear-gradient(
+    180deg,
+    rgba(1, 77, 47, 1) 0%,
+    rgba(0, 134, 47, 1) 100%
+  );
+}
 
-  .small_card {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.25rem;
-   }
+.register-right-title {
+  color: var(--dark-green);
+}
 
-  .small_card {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.25rem;
-   }
+.register-right-desc {
+  color: var(--dark-green);
+}
+
+.login {
+  border-radius: 10px;
+
+}
+
+.login-left-side {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.login-left-side {
+  background: #E5FAED;
+}
+
+.login-right-side {
+  width: 35%;
+}
+
+.register-title {
+  color: var(--dark-green);
+  font-size: 64px;
+}
+
+
+.register-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: var(--dark-green);
+  font-size: 1.5rem;
+}
+
+.reg-right-title {
+  font-size: 32px;
+}
+
+.reg-right-title, .reg-right-desc {
+  color: var(--dark-green);
+}
+
+input,select {
+  width: 100%;
+  padding: .5em 1em;
+  border: 1px solid rgba(128, 128, 128, 0.516);
+  border-radius: 5px;
+}
+
+.error-focus {
+  border: 2px solid red;
+}
+
+.error-focus:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.login-btn {
+  padding: .45em 0;
+  border-radius: 5px;
+  background: var(--dark-green);
+  color: white;
+  border: none;
+}
+
+.register-btn {
+  color: var(--medium-green);
+}
+
+.register-btn:hover {
+  color: var(--dark-green);
+}
+
+.messages {
+  font-size: 13px;
+  color: red;
+}
+
+.error-message {
+  outline: none;
+  color: red;
+}
+
 
   .small_card {
     position: absolute;
