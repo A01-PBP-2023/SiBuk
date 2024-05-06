@@ -7,16 +7,21 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 import json
 import datetime
+from user_auth.models import UserProfile
 # Create your views here.
 
 
 def show_favorites(request):
-    # favorite = request.user.food.all()
-    # return render(request, 'favorites.html')
-    # context = {
-    #     "favorite": favorite,
+    data = []
+    user = UserProfile.objects.filter(user=request.user).first()
+    for item in user.favfood.all():
+        item_data = serializers.serialize('python', [item])[0]
+        data.append(item_data)
+    context = {
+        "favorite": data,
 
-    # }
+    }
+    print(context)
 
-    return render(request, 'favorites.html', )
+    return render(request, 'favorites.html', context)
 
