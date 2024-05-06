@@ -143,22 +143,21 @@
   max-width: 200px;
 }
 
-.favorite-headline{
+.favorite-headline {
   font-size: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.favorite-headline{
+.favorite-headline {
   margin-left: 50px;
   color: var(--medium-green);
   font-family: "Montserrat", sans-serif;
-  
 }
 
-.favorite-headline::after{
-  content: '';
+.favorite-headline::after {
+  content: "";
   width: 100%;
   height: 2px;
   background: var(--medium-green);
@@ -168,117 +167,170 @@
 }
 
 .card-box {
-    background-color: transparent;
-    width: 400px;
-    transform: scale(1);
-    transition: 500ms all;
-    border-radius: 10px;
-    perspective: 1000px; 
-    cursor: pointer;
-  }
+  background-color: transparent;
+  width: 400px;
+  transform: scale(1);
+  transition: 500ms all;
+  border-radius: 10px;
+  perspective: 1000px;
+  cursor: pointer;
+}
 
 .card-box:hover {
   transform: scale(1.05);
   transform: translateY(-0.5em);
   transition: 500ms all;
 }
+
 .card-box-front {
   background-color: white;
   border-radius: 10px;
+  height: 200px;
 }
-  .card-box-front {
-    background-color: white;
-    border-radius: 10px;
-    height: 200px;
-  }
 
 .card-box-description {
   text-align: left;
 }
 
-   .card-decoration {
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
-      width: 150px;
-      height: 150px;
-      height: 100%;
-  }
+.card-decoration {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 150px;
+  height: 150px;
+  height: 100%;
+}
 
-  .card-box-title {
-    color: var(--dark-green);
-    font-size: 20px;
-  }
+.card-box-title {
+  color: var(--dark-green);
+  font-size: 20px;
+}
 
-  .card-box .nav-btn-custom {
-    padding: 5px 5px;
-  }
+.card-box .nav-btn-custom {
+  padding: 5px 5px;
+}
 
-  .trash_icon {
-   position: absolute;
-   right: 20px;
-   font-size: 1.25rem;
-   bottom: 10px;
-  }
+.trash_icon {
+  position: absolute;
+  right: 20px;
+  font-size: 1.25rem;
+  bottom: 10px;
+}
 
 .trash_icon :hover {
   color: grey;
 }
 
-  .small_card {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.25rem;
-   }
+.login-left-side .copyright-text {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  color: grey;
+}
 
-  .small_card {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.25rem;
-   }
+.login-container {
+  background: rgb(0, 35, 21);
+  background: linear-gradient(
+    180deg,
+    rgba(1, 77, 47, 1) 0%,
+    rgba(0, 134, 47, 1) 100%
+  );
+}
 
-  .small_card {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.25rem;
-   }
+.register-right-title {
+  color: var(--dark-green);
+}
 
-  .small_card {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.25rem;
-   }
+.register-right-desc {
+  color: var(--dark-green);
+}
 
-  .small_card {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.25rem;
-   }
+.login {
+  border-radius: 10px;
+}
 
-  .small_card {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.25rem;
-   }
+.login-left-side {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
 
-  .small_card {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.25rem;
-   }
+.login-left-side {
+  background: #e5faed;
+}
 
-  .small_card {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.25rem;
-   }
+.login-right-side {
+  width: 35%;
+}
+
+.register-title {
+  color: var(--dark-green);
+  font-size: 64px;
+}
+
+.register-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: var(--dark-green);
+  font-size: 1.5rem;
+}
+
+.reg-right-title {
+  font-size: 32px;
+}
+
+.reg-right-title,
+.reg-right-desc {
+  color: var(--dark-green);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.5em 1em;
+  border: 1px solid rgba(128, 128, 128, 0.516);
+  border-radius: 5px;
+}
+
+.error-focus {
+  border: 2px solid red;
+}
+
+.error-focus:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.login-btn {
+  padding: 0.45em 0;
+  border-radius: 5px;
+  background: var(--dark-green);
+  color: white;
+  border: none;
+}
+
+.register-btn {
+  color: var(--medium-green);
+}
+
+.register-btn:hover {
+  color: var(--dark-green);
+}
+
+.messages {
+  font-size: 13px;
+  color: red;
+}
+
+.error-message {
+  outline: none;
+  color: red;
+}
+.small_card {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25rem;
+}
 
 /* Favorites */
 .favorite-item {
@@ -338,8 +390,6 @@ footer {
 .small_heart:hover {
   color: red;
 }
-
-
 
 /* Responsiveness */
 
