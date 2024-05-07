@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import show_food, food_detail, add_food, get_food, get_food_by_id, filter_foods, add_to_favorites
+from .views import show_food, food_detail, add_food, get_food, get_food_by_id, filter_foods, add_to_favorites, show_json, show_json_by_id
 
 app_name = 'foods'
 

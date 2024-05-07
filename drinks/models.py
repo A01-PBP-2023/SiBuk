@@ -1,17 +1,13 @@
 from django.db import models
-from django.contrib.contenttypes.fields import GenericRelation
 from reviews.models import Review
+from django.contrib.contenttypes.fields import GenericRelation
 
 # Create your models here.
 class Drink(models.Model):
     id = models.AutoField(primary_key=True)
-    DRINK_CHOICES = [
-        ('kopi', 'Kopi'),
-        ('non kopi', 'Non kopi')
-    ]
-    merchant_area = models.CharField(max_length=255)
-    merchant_name = models.CharField(max_length=255)
-    product = models.CharField(max_length=255)
-    category = models.CharField(max_length=13, choices=DRINK_CHOICES)
-    description = models.CharField(max_length=255)
+    merchant_area = models.CharField(max_length=255, null=True, blank=True)
+    merchant_name = models.CharField(max_length=255, null=True, blank=True)
+    category = models.CharField(max_length=13, null=True, blank=True)
+    product = models.CharField(max_length=255, null=True, blank=True)
+    description = models.CharField(max_length=255, null=True, blank=True)
     reviews = GenericRelation(Review)
