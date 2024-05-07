@@ -1,4 +1,4 @@
-import json
+from django.urls import reverse
 from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
 from django.shortcuts import redirect, render, get_object_or_404
 from .models import Food
@@ -8,9 +8,7 @@ from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 
 def show_food(request):
-    user = request.user
     foods = Food.objects.all()
-    user_profile = UserProfile.objects.get(user=user)
     form = FoodFilterForm(request.GET)
 
     if form.is_valid():
@@ -47,13 +45,16 @@ def add_food(request):
         return HttpResponse(b"CREATED", status=201)
     return HttpResponseNotFound()
 
-def add_to_favorites(request, food_id, user_id):
-    user = UserProfile.objects.filter(user=request.user).first()
-    food = get_object_or_404(Food, id=food_id)
-    user.favfood.add(food)
-    print("Dipanggil")
-    print(user.favfood)
-    return redirect('favfnd:show_favorites')
+def add_to_favorites(request, food_id):
+    if request.user.is_authenticated:
+        user = UserProfile.objects.filter(user=request.user).first()
+        food = get_object_or_404(Food, id=food_id)
+        user.favfood.add(food)
+        print("Dipanggil")
+        print(user.favfood)
+        return redirect('favfnd:show_favorites')
+    else:
+        return redirect(reverse("user_auth:login"))
 
 def get_food(request):
     data = Food.objects.all()

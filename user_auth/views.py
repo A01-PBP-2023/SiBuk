@@ -1,24 +1,16 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth import login, authenticate, logout
-from django.contrib.auth.models import User
-from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+from django.http import  HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 from user_auth.forms import RegisterForm
-from user_auth.models import UserProfile
 from django.views.decorators.csrf import csrf_exempt
-import json
-
-
-
 
 def register(request):
     form = RegisterForm()
     if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
-            user_profile = UserProfile(form.user, form.user_type, None)
-            user_profile.save()
             form.save()
             messages.success(request, 'Your account has been successfully created!')
             return redirect('user_auth:login')  
@@ -27,9 +19,6 @@ def register(request):
         return redirect("recommended:show_page")
     else :
         return render(request, 'register.html', context)
-        
-
-
 
 def login_user(request):
     if request.method == "POST":
@@ -59,8 +48,6 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('recommended:show_page'))
     return response
 
-
-
 @csrf_exempt
 def login_flutter (request) :
     username = request.POST['username']
@@ -87,5 +74,3 @@ def login_flutter (request) :
             "status": False,
             "message": "Login gagal, periksa kembali email atau kata sandi."
         }, status=401)
-    
-
