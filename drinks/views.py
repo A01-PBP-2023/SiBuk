@@ -1,4 +1,4 @@
-import json
+from django.urls import reverse
 from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
 from django.shortcuts import redirect, render, get_object_or_404
 from .models import Drink
@@ -8,9 +8,7 @@ from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 
 def show_drink(request):
-    user = request.user
     drinks = Drink.objects.all()
-    user_profile = UserProfile.objects.get(user=user)
     form = DrinkFilterForm(request.GET)
 
     if form.is_valid():
@@ -18,7 +16,6 @@ def show_drink(request):
 
         if category:
             drinks = drinks.filter(category=category)
-
 
     context = {
         'form': form,
@@ -47,11 +44,16 @@ def add_drink(request):
         return HttpResponse(b"CREATED", status=201)
     return HttpResponseNotFound()
 
-def add_to_favorites(request, drink_id, user_id):
-    user = request.user.userprofile
-    drink = get_object_or_404(Katalog, id=drink_id)
-    user.cart.add(drink)
-    return redirect('foods:show_favorites')
+def add_to_favorites(request, drink_id):
+    if request.user.is_authenticated:
+        user = UserProfile.objects.filter(user=request.user).first()
+        drink = get_object_or_404(Drink, id=drink_id)
+        user.favdrink.add(drink)
+        print("Dipanggil")
+        print(user.favdrink)
+        return redirect('favfnd:show_favorites')
+    else:
+        return redirect(reverse("user_auth:login"))
 
 def get_drink(request):
     data = Drink.objects.all()
