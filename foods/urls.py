@@ -12,3 +12,5 @@ urlpatterns = [
     path('filter_foods/', filter_foods, name='filter_foods'),
     path('add_to_favorites/<int:food_id>/<int:user_id>/', add_to_favorites, name='add_to_favorites'),
 ]
+
+
