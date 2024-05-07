@@ -10,7 +10,7 @@ urlpatterns = [
     path('get_drink/', get_drink, name='get_drink'),
     path('get_drink/<int:id>/', get_drink_by_id, name="get_drink_by_id"),
     path('filter_drink/', filter_drink, name='filter_drink'),
-    path('add_to_favorites/', add_to_favorites, name='add_to_favorites'),
+    path('add_to_favorites/<int:drink_id>', add_to_favorites, name='add_to_favorites'),
     path("json/", show_json, name="show_json"),
     path("json/<int:id>", show_json_by_id, name="show_json_by_id")
 
