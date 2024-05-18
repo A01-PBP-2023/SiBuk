@@ -2,8 +2,7 @@ from django import forms
 from .models import Drink
 
 class DrinkFilterForm(forms.Form):
-    category = forms.ChoiceField(choices=Drink.DRINK_CHOICES, required=False)
-    merchant_area = forms.CharField(required=False, widget=forms.TextInput(attrs={'placeholder': 'Merchant Area'}))
+    category = forms.CharField(required=False, widget=forms.TextInput(attrs={'placeholder': 'Kopi/Nonkopi'}))
 
 class AddDrinkForm(forms.ModelForm):
     class Meta:

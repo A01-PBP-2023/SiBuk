@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     {% include "head.html" %}
+    {% include "base_scripts.html" %}
     {% block meta %}
     {% endblock meta %}
 </head>
@@ -11,8 +12,10 @@
     {% include "navbar.html" %}
     {% block content %}
     {% endblock content %}
-    {% include "base_scripts.html" %}
-
     {% include "footer.html" %}
+
+
+    {% block script %}
+    {% endblock script %}
 </body>
 </html>

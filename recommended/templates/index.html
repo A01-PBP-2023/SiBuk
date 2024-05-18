@@ -17,8 +17,8 @@
           <i class="fa-solid fa-bowl-food"></i>
         </span>
         <div>
-          <div class="hero-item-desc">Much food</div>
-          <div class="hero-item-desc">recomendation</div>
+          <div class="hero-item-desc">A lot of food</div>
+          <div class="hero-item-desc">recommendation</div>
         </div>
       </div>
       <div class="text-center d-flex flex-column" style="width: fit-content">
@@ -58,7 +58,7 @@
         <div class="features-desc">Explore delicious food</div>
       </div>
     </a>
-    <a class="p-4 feature-item shadow-sm position-relative" href="#">
+    <a class="p-4 feature-item shadow-sm position-relative" href="{% url 'drinks:show_drink' %}">
       <div class="feature-item-img">
         <img src="static/images/drinks.png" alt="" class="drinks-img" />
       </div>
@@ -75,9 +75,8 @@
         <h3 class="feature-title">Favorites</h3>
         <p class="features-desc">Add to favorites</p>
       </div>
-    </div>
-    <div class="p-4 feature-item shadow-sm position-relative">
-      <a href="{% url 'reviews:get_all' %}">
+    </a>
+    <a class="p-4 feature-item shadow-sm position-relative" href="{% url 'reviews:get_template' %}">
       <div class="feature-item-img feature-item-reviews">
         <img src="static/images/reviews.png" alt="" class="reviews-img" />
       </div>
@@ -86,14 +85,14 @@
         <div class="features-desc">Give your review</div>
       </div>
     </a>
-    </div>
   </div>
 </section>
 
 <!-- Recommended Section -->
 <section class="recommended-container container-fluid">
   <h2 class="hero-title text-center">Explore Our Recommendation</h2>
-  <div class="card-container m-4 p-4 d-flex flex-wrap gap-4">
+  <div class="card-container m-4 p-4 d-flex flex-wrap gap-4 justify-content-center">
+    {% for foodItem in food %}
     <!-- #### Card Item #### -->
     <div class="card-box">
       <div class="card-box-inner shadow-sm">
@@ -104,20 +103,49 @@
             alt="card-decoration"
           />
           <div class="card-box-description">
-            <h5 class="card-box-title mt-4">Sample Text</h5>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. In,
-              earum.
-            </p>
+            <h5 class="card-box-title mt-4" style="font-size: 1.25rem;">{{ foodItem.fields.product.title }}</h5>
+            <div>
+              <p>{{ foodItem.fields.merchant_area }}</p>
+              <p>{{ foodItem.fields.merchant_name }}</p>
+            </div>
+            <div class="relative">
+              <a href="{% url 'foods:food_detail' foodItem.pk %}" class="btn btn-success" style="background-color: #014d2f;">
+                  See Details
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="card-box-back">
-          <h2>Back Side</h2>
         </div>
       </div>
     </div>
+    {% endfor %}
+    <!-- #### Card Item #### -->
+    {% for drinkItem in drink %}
+    <!-- #### Card Item #### -->
+    <div class="card-box">
+      <div class="card-box-inner shadow-sm">
+        <div class="card-box-front d-flex gap-4">
+          <img
+            src="{% static  'images/card-decoration.jpg' %}"
+            class="card-decoration"
+            alt="card-decoration"
+          />
+          <div class="card-box-description">
+            <h5 class="card-box-title mt-4" style="font-size: 1.25rem;">{{ drinkItem.fields.product.title }}</h5>
+            <div>
+              <p>{{ drinkItem.fields.merchant_area }}</p>
+              <p>{{ drinkItem.fields.merchant_name }}</p>
+            </div>
+            <div class="relative">
+              <a href="{% url 'foods:food_detail' drinkItem.pk %}" class="btn btn-success" style="background-color: #014d2f;">
+                  See Details
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
     <!-- #### Card Item #### -->
   </div>
 </section>
-
 {% endblock content %}
