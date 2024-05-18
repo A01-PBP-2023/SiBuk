@@ -28,7 +28,15 @@
       <div class="card-box-inner shadow-sm">
         <div class="card-box-front d-flex gap-4">
           <img
-            src="{% static  'images/card-decoration.jpg' %}"
+          {% if  food.category == "Nasi" %}
+            src="{% static  'images/foods/rice.png' %}"
+          {% elif food.category == "Lainnya" %}
+            src="{% static  'images/foods/other.png' %}"
+          {% elif food.category == "Mie" %}
+            src="{% static  'images/foods/noodle.png' %}"
+          {% elif food.category == "Snack" %}
+            src="{% static  'images/foods/snack.png' %}"
+          {% endif %}
             class="card-decoration"
             alt="card-decoration"
           />

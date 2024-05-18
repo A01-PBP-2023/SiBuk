@@ -98,18 +98,26 @@
       <div class="card-box-inner shadow-sm">
         <div class="card-box-front d-flex gap-4">
           <img
-            src="{% static  'images/card-decoration.jpg' %}"
+          {% if  foodItem.fields.category == "Nasi" %}
+            src="{% static  'images/foods/rice.png' %}"
+          {% elif foodItem.fields.category == "Lainnya" %}
+            src="{% static  'images/foods/other.png' %}"
+          {% elif foodItem.fields.category == "Mie" %}
+            src="{% static  'images/foods/noodle.png' %}"
+          {% elif foodItem.fields.category == "Snack" %}
+            src="{% static  'images/foods/snack.png' %}"
+          {% endif %}
             class="card-decoration"
             alt="card-decoration"
           />
           <div class="card-box-description">
-            <h5 class="card-box-title mt-4" style="font-size: 1.25rem;">{{ foodItem.fields.product.title }}</h5>
+            <h5 class="card-box-title mt-4">{{ foodItem.fields.product.title }}</h5>
             <div>
               <p>{{ foodItem.fields.merchant_area }}</p>
               <p>{{ foodItem.fields.merchant_name }}</p>
             </div>
             <div class="relative">
-              <a href="{% url 'foods:food_detail' foodItem.pk %}" class="btn btn-success" style="background-color: #014d2f;">
+              <a href="{% url 'foods:food_detail' foodItem.pk %}" class="btn-custom" style="background-color: #014d2f;">
                   See Details
               </a>
             </div>
@@ -130,13 +138,13 @@
             alt="card-decoration"
           />
           <div class="card-box-description">
-            <h5 class="card-box-title mt-4" style="font-size: 1.25rem;">{{ drinkItem.fields.product.title }}</h5>
+            <h5 class="card-box-title mt-4">{{ drinkItem.fields.product.title }}</h5>
             <div>
               <p>{{ drinkItem.fields.merchant_area }}</p>
               <p>{{ drinkItem.fields.merchant_name }}</p>
             </div>
             <div class="relative">
-              <a href="{% url 'foods:food_detail' drinkItem.pk %}" class="btn btn-success" style="background-color: #014d2f;">
+              <a href="{% url 'foods:food_detail' drinkItem.pk %}" class="btn-custom" style="background-color: #014d2f;">
                   See Details
               </a>
             </div>
