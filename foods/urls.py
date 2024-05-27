@@ -11,6 +11,7 @@ urlpatterns = [
     path('get_food/<int:id>/', get_food_by_id, name="get_food_by_id"),
     path('filter_foods/', filter_foods, name='filter_foods'),
     path('add_to_favorites/<int:food_id>/', add_to_favorites, name='add_to_favorites'),
+    path('json/', show_json, name='show_json'),
 ]
 
 

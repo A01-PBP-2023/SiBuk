@@ -84,3 +84,34 @@ def show_json(request):
 def show_json_by_id(request, id):
     data = Food.objects.filter(pk=id)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+@csrf_exempt
+def create_food_flutter(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+
+            merchant_area = data.get('Merchant_Area')
+            merchant_name = data.get('Merchant_Name')
+            category = data.get('Category')
+            product = data.get('Product')
+            description = data.get('Description')
+
+            new_food = Food.objects.create(
+                Merchant_Area=merchant_area,
+                Merchant_Name=merchant_name,
+                Category=category,
+                Product=product,
+                Description=description,
+            )
+
+            new_food.save()
+
+            return JsonResponse({"status": "success", "message": "Food added successfully"}, status=200)
+
+        except Exception as e:
+            return JsonResponse({"status": "error", "message": str(e)}, status=400)
+
+    else:
+        return JsonResponse({"status": "error", "message": "Invalid request"}, status=400)
+
