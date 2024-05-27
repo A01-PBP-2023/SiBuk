@@ -2,6 +2,7 @@ from django.db import models
 from django.db import models
 from django.contrib.auth.models import User
 from foods.models import Food
+from drinks.models import Drink
 
 
 # Create your models here.
@@ -14,3 +15,4 @@ class Favorite(models.Model):
     product = models.CharField(max_length=255, )
     description = models.CharField(max_length=255, )
     food = models.ManyToManyField(Food)
+    drink = models.ManyToManyField(Drink)

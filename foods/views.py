@@ -10,10 +10,9 @@ from django.views.decorators.csrf import csrf_exempt
 def show_food(request):
     foods = Food.objects.all()
     form = FoodFilterForm(request.GET)
-
+    
     if form.is_valid():
         category = form.cleaned_data.get("category")
-
         if category:
             foods = foods.filter(category=category)
 
@@ -50,8 +49,6 @@ def add_to_favorites(request, food_id):
         user = UserProfile.objects.filter(user=request.user).first()
         food = get_object_or_404(Food, id=food_id)
         user.favfood.add(food)
-        print("Dipanggil")
-        print(user.favfood)
         return redirect('favfnd:show_favorites')
     else:
         return redirect(reverse("user_auth:login"))
@@ -68,11 +65,9 @@ def get_food_by_id(request, id):
 @csrf_exempt
 def filter_foods(request):
     category = request.GET.get('category', '')
-
     foods = Food.objects.all()
     if category:
         foods = foods.filter(category=category)
-
     foods_json = serializers.serialize('json', foods)
     return JsonResponse(foods_json, safe=False)
 

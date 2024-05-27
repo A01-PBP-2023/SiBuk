@@ -15,10 +15,20 @@
       id="filterForm"
       class="filter-form"
       method="GET"
-      onsubmit="submitFilterForm()"
+      
     >
-      {{ form.as_p }}
-      <button type="submit" class="filter-btn">Filter</button>
+    <button type="submit" class="filter-btn" name="category" value="Kopi">
+      <img src="{% static "images/category/coffe_icon.png" %}" class="filter-img" alt="">
+      <span>Coffee</span>
+    </button>
+    <button type="submit" class="filter-btn" name="category" value="Non_Kopi">
+      <img src="{% static "images/category/non_coffee_icon.png" %}" class="filter-img" alt="">
+      <span>Non Coffee</span>
+    </button>
+    <button type="submit" class="filter-btn" name="" value="">
+      <img src="{% static "images/category/no_filter_drink.png" %}" class="filter-img" alt="">
+      <span>Remove Filter</span>
+    </button>
     </form>
   </div>
 
@@ -28,7 +38,11 @@
       <div class="card-box-inner shadow-sm">
         <div class="card-box-front d-flex gap-4">
           <img
-            src="{% static  'images/card-decoration.jpg' %}"
+          {% if  drink.category == "Kopi" %}
+            src="{% static  'images/category/coffe_icon.png' %}"
+          {% else %}
+            src="{% static 'images/category/non_coffee_icon.png' %}"
+          {% endif %}
             class="card-decoration"
             alt="card-decoration"
           />
@@ -60,6 +74,4 @@
     {% endfor %}
   </div>
 </div>
-{% endblock content %} {% block script %}
-<script src="static/js/modal_Drink.js"></script>
-{% endblock script %}
+{% endblock content %} 

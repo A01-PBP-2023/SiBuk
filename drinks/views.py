@@ -67,12 +67,11 @@ def get_drink_by_id(request, id):
 @csrf_exempt
 def filter_drink(request):
     category = request.GET.get('category', '')
-
     drinks = Drink.objects.all()
     if category:
         drinks = drinks.filter(category=category)
-
     drinks_json = serializers.serialize('json', drinks)
+    print(category)
     return JsonResponse(drinks_json, safe=False)
 
 def show_json(request):

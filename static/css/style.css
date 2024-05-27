@@ -79,6 +79,7 @@
 
 .hero-item-icon {
   color: var(--medium-green);
+  font-size: 2rem;
 }
 
 .features-container {
@@ -143,28 +144,44 @@
   max-width: 200px;
 }
 
-.favorite-headline {
-  font-size: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.favorite-container a {
+  text-decoration: none;
 }
 
-.favorite-headline {
-  margin-left: 50px;
-  color: var(--medium-green);
-  font-family: "Montserrat", sans-serif;
+.fav-cata-item {
+   cursor: pointer;
+   transform: translateY(0px);
+   transition: all 500ms;
 }
 
-.favorite-headline::after {
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: var(--medium-green);
-  display: block;
-  position: relative;
-  bottom: 15px;
+.fav-cata-item:hover {
+  transform: translateY(-10px);
+  transition: all 500ms;
 }
+
+
+.fav-cata-img {
+  width: 400px;
+}
+
+.favorite-drink-container {
+  padding: 3em 0 10em 0;
+}
+
+.favorite-food-container {
+  padding: 3em 0 10em 0;
+}
+
+.empty-message {
+  margin: 0 auto;
+  width: fit-content;
+  color: var(--dark-green);
+}
+
+.cata-link {
+  color: var(--dark-green);
+}
+
 
 .card-box {
   background-color: transparent;
@@ -202,7 +219,7 @@
 
 .card-box-title {
   color: var(--dark-green);
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .card-box .nav-btn-custom {
@@ -391,6 +408,45 @@ footer {
   color: red;
 }
 
+.btn-custom {
+  padding: .5em 1em;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+
+.filter-box {
+  margin: 3em auto 3em auto;
+  width: fit-content;
+}
+
+.filter-btn {
+  border: none;
+  display: inline-block;
+  background: none;
+  transform: scale(1) translateY(0);
+  transition: all 500ms;
+}
+
+.filter-btn:hover {
+  transform: scale(1.05) translateY(-10px);
+  transition: all 500ms;
+}
+
+
+.filter-img {
+  width: 100px;
+  border-radius: 100%;
+  display: block;
+}
+
+.filter-btn span {
+  display: block;
+  font-weight: 500;
+}
+
 /* Responsiveness */
 
 @media (max-width: 918px) {
@@ -403,6 +459,20 @@ footer {
   .hero-items {
     width: fit-content;
   }
+
+  .hero-title, .feature-title {
+    font-size: 18px;
+  }
+
+  .feature-desc {
+    font-size: 16px
+  }
+
+
+  .hero-item-icon {
+    font-size: 1.5rem;
+  }
+  
 
   .hero-image {
     max-width: 350px;
@@ -421,9 +491,24 @@ footer {
     order: 1;
   }
 
+  .card-decoration {
+    width: 150px;
+  }
+
+  .btn-custom {
+    font-size: .85rem;
+  }
+
+  .card-box-title {
+    font-size: 16px;
+  }
+
   @media (max-width: 640px) {
     .hero-image {
       max-width: 300px;
+    }
+    .card-decoration {
+      width: 100px;
     }
   }
 }
