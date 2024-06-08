@@ -6,11 +6,11 @@ from django.core import serializers
 from django.urls import reverse
 from django.db.models import Count, Avg
 from django.template.loader import render_to_string
-
 from .models import Review
 from .forms import ReviewForm
 from foods.models import Food
 from drinks.models import Drink
+
 
 @login_required(login_url='/user_auth/login')
 def review_fnd(request, content_type, object_id):
@@ -39,6 +39,7 @@ def review_fnd(request, content_type, object_id):
     form = ReviewForm()
     return render(request, 'review_form.html', {'object': obj, 'form':form})
 
+
 def review_fnd_ajax(request, content_type, object_id):
     content_type = ContentType.objects.get(model=content_type)
     if (content_type.model != 'food') and (content_type.model == 'drink'):
@@ -64,6 +65,7 @@ def review_fnd_ajax(request, content_type, object_id):
 
     return JsonResponse({'success': False, 'error': 'Invalid request method'})
 
+
 def get_reviews_json(request, content_type, object_id):
     content_type = ContentType.objects.get(model=content_type)
     if content_type.model == 'food':
@@ -76,6 +78,8 @@ def get_reviews_json(request, content_type, object_id):
     reviews_data = serializers.serialize('json', reviews)
     return JsonResponse({'reviews': reviews_data}, safe=False)
 
+
+
 def get_reviews_template(request, content_type, object_id):
     content_type = ContentType.objects.get(model=content_type)
     if content_type.model == 'food':
@@ -87,12 +91,15 @@ def get_reviews_template(request, content_type, object_id):
     reviews = Review.objects.filter(content_type=content_type, object_id=object_id)
     return render(request, 'fnd_reviews.html', {'reviews': reviews})
 
+
+
 def reviews_template(request):
     return render(request, 'all_reviews.html')
 
+
+
 def get_all_reviews_partial(request):
     data = []
-
     foods = Food.objects.prefetch_related('reviews').annotate(num_reviews=Count('reviews')).all()
     for food in foods:
         food_data = serializers.serialize('python', [food])[0]
@@ -101,7 +108,6 @@ def get_all_reviews_partial(request):
         food_data['fields']['percentage_rating'] = food_data['fields']['average_rating']/5*100
         food_data['fields']['num_reviews'] = food.num_reviews
         data.append(food_data)
-
     drinks = Drink.objects.prefetch_related('reviews').annotate(num_reviews=Count('reviews')).all()
     for drink in drinks:
         drink_data = serializers.serialize('python', [drink])[0]
@@ -110,7 +116,6 @@ def get_all_reviews_partial(request):
         drink_data['fields']['percentage_rating'] = drink_data['fields']['average_rating']/5*100
         drink_data['fields']['num_reviews'] = drink.num_reviews
         data.append(drink_data)
-
     sort_by = request.GET.get('sort_by')
     if sort_by == 'rating':
         data.sort(key=lambda x: x['fields']['average_rating'] or 0, reverse=True)

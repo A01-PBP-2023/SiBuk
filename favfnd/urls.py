@@ -1,5 +1,5 @@
 from django.urls import path
-from favfnd.views import show_favorites, show_json_favfood, show_favfood, show_favdrink, filter_foods, filter_drink
+from favfnd.views import show_favorites, show_favfood, show_favdrink, filter_foods, filter_drink, show_json_favfood_by_user_id, show_json_favdrink_by_user_id
 
 app_name = 'favfnd'
 
@@ -9,5 +9,6 @@ urlpatterns = [
     path('food/filter_foods/', filter_foods, name='filter_foods'),
     path("drink/", show_favdrink, name="show_favdrink"),
     path('drink/filter_drink/', filter_drink, name='filter_drink'),
-    path("json/", show_json_favfood, name="show_json_favfood"),
+    path("get-favfood/<int:user_id>/", show_json_favfood_by_user_id, name="show_json_favfood_by_user_id"),
+    path("get-favdrink/<int:user_id>/", show_json_favdrink_by_user_id, name="show_json_favdrink_by_user_id"),
 ]

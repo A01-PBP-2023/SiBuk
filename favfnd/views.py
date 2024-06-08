@@ -8,6 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import Drink
 from .models import Food
 from .forms import FoodFilterForm, DrinkFilterForm
+import json
 # Create your views here.
 
 def show_favorites(request):
@@ -68,10 +69,18 @@ def filter_foods(request):
     foods_json = serializers.serialize('json', data_food)
     return JsonResponse(foods_json, safe=False)
 
-def show_json_favfood (request) :
-    user = UserProfile.objects.filter(user=request.user).first()
+def show_json_favfood_by_user_id (request, user_id) :
+    user = UserProfile.objects.filter(user=user_id).first()
     datafood = user.favfood.all()
     return HttpResponse(serializers.serialize("json", datafood), content_type="application/json")
+     
+def show_json_favdrink_by_user_id (request, user_id) :
+    user = UserProfile.objects.filter(user=user_id).first()
+    datafood = user.favdrink.all()
+    return HttpResponse(serializers.serialize("json", datafood), content_type="application/json")
+     
+
+
 
     
 

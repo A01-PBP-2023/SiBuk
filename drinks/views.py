@@ -6,6 +6,8 @@ from .forms import DrinkFilterForm
 from user_auth.models import UserProfile
 from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
+import json
+
 
 def show_drink(request):
     drinks = Drink.objects.all()
@@ -82,3 +84,16 @@ def show_json(request):
 def show_json_by_id(request, id):
     data = Drink.objects.filter(pk=id)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+
+@csrf_exempt
+def add_to_fav_flutter (request, drink_id, user_id) :
+    if request.method == 'POST' :
+            data = json.loads(request.body)
+            user_id = data.get('user_id')
+            user = UserProfile.objects.filter(user=user_id).first()
+            drink = get_object_or_404(Drink, id=drink_id)
+            user.favdrink.add(drink)
+            return JsonResponse({"status": "success", "message": "Berhasil ditambahkan ke favorite!"}, status=200)
+    else :
+        return JsonResponse({"status": "error", "message": "invalid request method"}, status=401)
