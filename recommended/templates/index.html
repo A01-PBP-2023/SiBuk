@@ -147,6 +147,31 @@
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+    </div>
+    {% endfor %}
+    <!-- #### Card Item #### -->
+    {% for drinkItem in drink %}
+    <!-- #### Card Item #### -->
+    <div class="card-box">
+      <div class="card-box-inner shadow-sm">
+        <div class="card-box-front d-flex gap-4">
+          <img
+            src="{% static  'images/card-decoration.jpg' %}"
+            class="card-decoration"
+            alt="card-decoration"
+          />
+          <div class="card-box-description">
+            <h5 class="card-box-title mt-4" style="font-size: 1.25rem;">{{ drinkItem.fields.product.title }}</h5>
+            <div>
+              <p>{{ drinkItem.fields.merchant_area }}</p>
+              <p>{{ drinkItem.fields.merchant_name }}</p>
+            </div>
+            <div class="relative">
+              <a href="{% url 'drinks:drink_detail' drinkItem.pk %}" class="btn btn-success" style="background-color: #014d2f;">
+                  See Details
+              </a>
+=======
       {% endfor %}
       <!-- #### Card Item #### -->
       {% for drinkItem in drink %}
@@ -175,6 +200,7 @@
                     See Details
                 </a>
               </div>
+>>>>>>> 4c20c1a5fdbf21841cffa7be9bb793044d52d9c4
             </div>
           </div>
         </div>
