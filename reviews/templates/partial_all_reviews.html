@@ -5,14 +5,26 @@
         <div class="card-box-inner shadow-sm">
             <div class="card-box-front d-flex gap-4">
                 <img
-                src="{% static  'images/card-decoration.jpg' %}"
+                {% if item.fields.category == "Nasi"  %}
+                    src="{% static  'images/category/rice_icon.png' %}"
+                {% elif item.fields.category == "Mie"  %}
+                    src="{% static  'images/category/noodle_icon.png' %}"
+                {% elif item.fields.category == "Snack"  %}
+                    src="{% static  'images/category/snack_icon.png' %}"
+                {% elif item.fields.category == "Lainnya"  %}
+                    src="{% static  'images/category/other_icon.png' %}"
+                {% elif  item.fields.category == "Kopi" %}
+            	    src="{% static  'images/category/coffe_icon.png' %}"
+                {% else %}
+                    src="{% static 'images/category/non_coffee_icon.png' %}"
+                {% endif %}
                 class="card-decoration"
                 alt="card-decoration"
                 />
                 <div class="card-box-description">
                     <div class="stars-landing" id="stars-box" style="--rating: {{ item.fields.average_rating }};">★★★★★</div>
                     <h5 class="card-title">{{ item.fields.num_reviews }} reviews</h5>
-                    <h5 class="card-box-title mt-4" style="font-size: 1.25rem;">{{ item.fields.product }}</h5>
+                    <h5 class="card-box-title mt-4" style="font-size: 1.25rem;">{{ item.fields.product.title|truncatewords:2 }}</h5>
                     <div class="relative">
                         {% if item.type == 'food' %}
                         <a href="{% url 'foods:food_detail' item.pk %}" class="btn btn-success" >

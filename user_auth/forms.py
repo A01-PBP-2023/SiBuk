@@ -3,7 +3,6 @@ from django import forms
 from user_auth.models import UserProfile
 from django.contrib.auth.models import User
 
-
 class RegisterForm(UserCreationForm) :
     user_type = forms.ChoiceField(
         choices = (("admin", "Admin"), ("user", "User")),

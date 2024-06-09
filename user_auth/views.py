@@ -1,14 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth import login, authenticate, logout
-from django.contrib.auth.models import User
-from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+from django.http import  HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 from user_auth.forms import RegisterForm
-from user_auth.models import UserProfile
 from django.views.decorators.csrf import csrf_exempt
-import json
-
 
 def register(request):
     form = RegisterForm()
@@ -23,9 +19,6 @@ def register(request):
         return redirect("recommended:show_page")
     else :
         return render(request, 'register.html', context)
-        
-
-
 
 def login_user(request):
     if request.method == "POST":
@@ -54,3 +47,49 @@ def logout_user(request):
     logout(request)
     response = HttpResponseRedirect(reverse('recommended:show_page'))
     return response
+
+@csrf_exempt
+def login_flutter (request) :
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(username=username, password=password)
+    if user is not None:
+        if user.is_active:
+            login(request, user)
+            # Status login sukses.
+            return JsonResponse({
+                "username": user.username,
+                "status": True,
+                "id": user.id,
+                "type": user.userprofile.user_type,
+                "message": "Login sukses!"
+                # Tambahkan data lainnya jika ingin mengirim data ke Flutter.
+            }, status=200)
+        else:
+            return JsonResponse({
+                "status": False,
+                "message": "Login gagal, akun dinonaktifkan."
+            }, status=401)
+
+    else:
+        return JsonResponse({
+            "status": False,
+            "message": "Login gagal, periksa kembali email atau kata sandi."
+        }, status=401)
+    
+
+@csrf_exempt
+def logout_flutter(request):
+    username = request.user.username
+    try:
+        logout(request)
+        return JsonResponse({
+            "username": username,
+            "status": True,
+            "message": "Logout berhasil!"
+        }, status=200)
+    except:
+        return JsonResponse({
+        "status": False,
+        "message": "Logout gagal."
+        }, status=401)
