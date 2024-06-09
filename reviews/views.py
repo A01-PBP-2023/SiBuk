@@ -121,3 +121,43 @@ def get_all_reviews_partial(request):
     html_content = render_to_string('partial_all_reviews.html', {'data': data})
     return JsonResponse({'html_content': html_content})
 
+def get_all_reviews_json(request):
+    data = []
+
+    foods = Food.objects.prefetch_related('reviews').annotate(num_reviews=Count('reviews')).all()
+    for food in foods:
+        average_rating = food.reviews.aggregate(avg_rating=Avg('rating'))['avg_rating'] or 0
+        food_data = {
+            'model': 'food',
+            'pk': food.id,
+            'fields': {
+                'average_rating': average_rating,
+                'percentage_rating': average_rating / 5 * 100,
+                'num_reviews': food.num_reviews
+            }
+        }
+        data.append(food_data)
+
+    # Get all drinks with their review counts and prefetch the reviews
+    drinks = Drink.objects.prefetch_related('reviews').annotate(num_reviews=Count('reviews')).all()
+    for drink in drinks:
+        average_rating = drink.reviews.aggregate(avg_rating=Avg('rating'))['avg_rating'] or 0
+        drink_data = {
+            'model': 'drink',
+            'pk': drink.id,
+            'fields': {
+                'average_rating': average_rating,
+                'percentage_rating': average_rating / 5 * 100,
+                'num_reviews': drink.num_reviews
+            }
+        }
+        data.append(drink_data)
+
+    sort_by = request.GET.get('sort_by')
+    if sort_by == 'rating':
+        data.sort(key=lambda x: x['fields']['average_rating'], reverse=True)
+    elif sort_by == 'reviews':
+        data.sort(key=lambda x: x['fields']['num_reviews'], reverse=True)
+
+    return JsonResponse(data, safe=False)
+
