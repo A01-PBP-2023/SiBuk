@@ -60,6 +60,8 @@ def login_flutter (request) :
             return JsonResponse({
                 "username": user.username,
                 "status": True,
+                "id": user.id,
+                "type": user.userprofile.user_type,
                 "message": "Login sukses!"
                 # Tambahkan data lainnya jika ingin mengirim data ke Flutter.
             }, status=200)
@@ -73,4 +75,21 @@ def login_flutter (request) :
         return JsonResponse({
             "status": False,
             "message": "Login gagal, periksa kembali email atau kata sandi."
+        }, status=401)
+    
+
+@csrf_exempt
+def logout_flutter(request):
+    username = request.user.username
+    try:
+        logout(request)
+        return JsonResponse({
+            "username": username,
+            "status": True,
+            "message": "Logout berhasil!"
+        }, status=200)
+    except:
+        return JsonResponse({
+        "status": False,
+        "message": "Logout gagal."
         }, status=401)

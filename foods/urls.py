@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import show_food, food_detail, add_food, get_food, get_food_by_id, filter_foods, add_to_favorites, show_json, show_json_by_id
+from .views import show_food, food_detail, add_food, get_food, get_food_by_id, filter_foods, add_to_favorites, show_json, show_json_by_id, add_to_fav_flutter
 
 app_name = 'foods'
 
@@ -11,6 +11,8 @@ urlpatterns = [
     path('get_food/<int:id>/', get_food_by_id, name="get_food_by_id"),
     path('filter_foods/', filter_foods, name='filter_foods'),
     path('add_to_favorites/<int:food_id>/', add_to_favorites, name='add_to_favorites'),
+    path("json/", show_json, name="show_json"),
+    path("add_to_fav_flutter/<int:food_id>/<int:user_id>/", add_to_fav_flutter, name="add_to_fav_flutter")
 ]
 
 

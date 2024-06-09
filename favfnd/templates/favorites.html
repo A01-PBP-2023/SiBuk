@@ -6,48 +6,17 @@
 {% endblock meta %}
 
 {% block content %}
-<!--Menu-->
-
-<h1 class="favorite-headline mt-4 text-center">Your<span class="favorite-sub-headline">Favorites</span></h1>
-
-
-
-<!-- #### Card Item #### -->
-{% for item in favorite %}
-<div class="container-fluid m-4 pt-5">
-  <div class="card-box">
-    <div class="card-box-inner shadow-sm">
-      <div class="card-box-front d-flex gap-4">
-        <img src="{% static  'images/card-decoration.jpg' %}" class="card-decoration" alt="card-decoration" />
-
-        <div class="card-box-description">
-          <div class="menu_icon mt-2">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-          </div>
-          <h5 class="card-box-title ">{{ item.fields.product }}</h5>
-          <div>
-            <p>Jakarta</p>
-            <p>Mie Gacoan</p>
-          </div>
-          <div class="trash_icon">
-            <i class="fa-solid fa-trash"></i>
-          </div>
-          <div class="relative ">
-            <a class="nav-btn-custom">
-              See Details
+    <div class="container-fluid favorite-container mx-auto my-4">
+        <h2 class="hero-title text-center py-4">Explore Your Favorites</h2>
+        <div class="d-flex justify-content-center gap-4">
+            <a href="{% url "favfnd:show_favfood" %}" class="d-flex flex-column justify-content-center align-items-center fav-cata-item">
+                <img src="{% static "images/category/rice_icon.png" %}" class="fav-cata-img" alt="">
+                <span class="hero-title fs-2">Foods</span>
             </a>
-          </div>
+            <a href="{% url "favfnd:show_favdrink" %}" class="d-flex flex-column justify-content-center align-items-center fav-cata-item">
+                <img src="{% static "images/category/coffe_icon.png" %}" class="fav-cata-img" alt="">
+                <span class="hero-title fs-2">Drinks</span>
+            </a>            
         </div>
-      </div>
     </div>
-  </div>
-{% endfor %}
-  
-  {% comment %} Card Item {% endcomment %}
-</div>
-
-{% endblock content %}
+{% endblock content %} 

@@ -29,7 +29,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Hot Millsis",
           "description": "Sajian susu coklat milo dengan racikan khas 3:30 Kopi"
         }
@@ -41,7 +41,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Ice Millsis",
           "description": "Sajian susu coklat milo dengan racikan khas 3:30 Kopi"
         }
@@ -77,7 +77,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Hot 330 Helateh",
           "description": "Sajian Teh Tarik Segar Khas 3 : 30 Kopi"
         }
@@ -89,7 +89,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Ice 330 Helateh",
           "description": "Sajian Teh Tarik Segar Khas 3 : 30 Kopi"
         }
@@ -365,7 +365,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Hot Matcha",
           "description": "Sajian Minuman Segar Rasa Matcha"
         }
@@ -377,7 +377,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Ice Matcha",
           "description": "Sajian Minuman Segar Rasa Matcha"
         }
@@ -389,7 +389,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Hot Charcoal",
           "description": "Sajian Minuman Segar Rasa Charcoal Yang Unik"
         }
@@ -401,7 +401,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Ice Charcoal",
           "description": "Sajian Minuman Segar Rasa Charcoal Yang Unik"
         }
@@ -413,7 +413,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Hot Coklat",
           "description": "Sajian Minuman Segar Rasa Coklat"
         }
@@ -425,7 +425,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Ice Coklat",
           "description": "Sajian Minuman Segar Rasa Coklat"
         }
@@ -437,7 +437,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Hot Lemon Tea",
           "description": "Sajian Teh Segar Dengan Rasa Lemon"
         }
@@ -449,7 +449,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Ice Lemon Tea",
           "description": "Sajian Teh Segar Dengan Rasa Lemon"
         }
@@ -461,7 +461,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Ice Yakult Squash",
           "description": "Sajian Minuman Segar Paduan Yakult Dan Racikan Khas 3 : 30 Kopi"
         }
@@ -473,7 +473,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Kopi Beer",
           "description": "Sensasi Kopi Yang Segar"
         }
@@ -485,7 +485,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Teh Jelly",
           "description": "Teh Dengan Campuran Susu Yg Di Mix Jelly"
         }
@@ -497,7 +497,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Lemon Squash",
           "description": "Minuman Lemon Dengan Campuran Sparkling Water"
         }
@@ -509,7 +509,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Ocean Blue",
           "description": ""
         }
@@ -521,7 +521,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Chocomint",
           "description": ""
         }
@@ -533,7 +533,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Lychee Squash",
           "description": ""
         }
@@ -545,7 +545,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "330 Kopi",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Chocoreo",
           "description": "Perpaduan Chocolate Dan Oreo"
         }
@@ -617,7 +617,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "C7HomeCoffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Cannon Rock",
           "description": "Ginger Soda Dengan Black Tea Special"
         }
@@ -629,7 +629,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "C7HomeCoffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Lemonade Green Tea",
           "description": "Sensasi Segar Lemon Dan Mint Dengan Basic Green Tea"
         }
@@ -641,7 +641,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "C7HomeCoffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Kombucha",
           "description": "Fermentasi Daun Teh Terbaik Menjadi Minuman Berkabonasi"
         }
@@ -653,7 +653,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "C7HomeCoffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Rengganis Milk Tea",
           "description": "Teh Hitam Sensasi Caramel Nutty Dipadu Dengan Susu Murni"
         }
@@ -665,7 +665,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "C7HomeCoffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Iced Black Tea",
           "description": "Basic teh"
         }
@@ -677,7 +677,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "C7HomeCoffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Lychee Tea",
           "description": "Teh Hitam Dengan Syrup Leci Dan Buah Leci"
         }
@@ -689,7 +689,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "C7HomeCoffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Red Glory",
           "description": ""
         }
@@ -701,7 +701,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "C7HomeCoffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Yellow Macchiatea",
           "description": ""
         }
@@ -713,7 +713,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "C7HomeCoffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Mojito Mint",
           "description": "Soda Dengan Syrup Mojito"
         }
@@ -725,7 +725,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "C7HomeCoffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Pinky Punch",
           "description": "Strawbery Blueberry Mojito Dan Soda"
         }
@@ -737,7 +737,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "C7HomeCoffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Tropical Blue",
           "description": "Banana Peppermint Blueberry Telang Dan Soda"
         }
@@ -749,7 +749,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "C7HomeCoffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Ice Red Velvet",
           "description": ""
         }
@@ -761,7 +761,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "C7HomeCoffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Hot Red Velvet",
           "description": ""
         }
@@ -773,7 +773,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "C7HomeCoffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Banana Delight",
           "description": "Susu Rasa Pisang Dengan Salted Caramel"
         }
@@ -785,7 +785,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "C7HomeCoffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Crumbs Milk",
           "description": "Susu Rasa Salted Caramel Dengan Remahan Biskuit"
         }
@@ -821,7 +821,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "CafeOTSS",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Hibiscus Mango",
           "description": "Rosela Tea With Mango"
         }
@@ -833,7 +833,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "CafeOTSS",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Yakult Tea",
           "description": "Tea With Yakult"
         }
@@ -845,7 +845,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "CafeOTSS",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Mineral Water",
           "description": ""
         }
@@ -857,7 +857,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "CafeOTSS",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Somethin Green",
           "description": "Green Apple Lemon"
         }
@@ -869,7 +869,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "CafeOTSS",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Thai Tea",
           "description": "Tea, Milk"
         }
@@ -929,7 +929,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Cotta Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Taro",
           "description": "Taro(han) Ini Enak"
         }
@@ -941,7 +941,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Cotta Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Milo Dinosaur",
           "description": "Sometimes Your Kid Need More Than Water"
         }
@@ -953,7 +953,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Cotta Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Korean Strawberry Milk Latte",
           "description": "Must Try This Latte"
         }
@@ -1025,7 +1025,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Fore Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Hazelnut Chocolate (Hot)",
           "description": "Cokelat kaya dan lembut dengan rasa hazelnut"
         }
@@ -1037,7 +1037,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Fore Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Hazelnut Chocolate (Ice)",
           "description": "Cokelat kaya dan lembut dengan rasa hazelnut"
         }
@@ -1049,7 +1049,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Fore Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Hibiscus Pink Grapefruit",
           "description": "Kebaikan buah grapefruit dan hibiscus yang memberi kesegaran sepanjang hari"
         }
@@ -1061,7 +1061,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Fore Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Hibiscus Peach Yakult",
           "description": "Kebaikan buah peach, hibiscus, dan yakult yang memberi kesegaran sepanjang hari"
         }
@@ -1073,7 +1073,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Fore Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Hibiscus Berry Yakult",
           "description": "Kebaikan buah berry, hibiscus, dan yakult yang memberi kesegaran sepanjang hari"
         }
@@ -1085,7 +1085,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Fore Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Biscuit Chizu",
           "description": "Perpaduan susu segar dengan busa keju krim di atasnya dengan biskuit remuk"
         }
@@ -1097,7 +1097,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Fore Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Choco Chizu",
           "description": "Cokelat kaya dan lembut dengan busa keju krim disajikan dengan es"
         }
@@ -1109,7 +1109,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Fore Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Matcha Chizu (Iced)",
           "description": "Perpaduan antara matcha premium dan busa keju krim dalam cangkir"
         }
@@ -1121,7 +1121,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Fore Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Chizu Macchiato (Iced)",
           "description": "Paduan susu, sirup roasted caramel, lapisan krim Chizu, dan espresso di atasnya"
         }
@@ -1133,7 +1133,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Fore Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "English Breakfast Tea (Hot)",
           "description": "The legendary grand classic fragrant black tea"
         }
@@ -1145,7 +1145,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Fore Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "English Breakfast Tea (Iced)",
           "description": "The legendary grand classic fragrant black tea"
         }
@@ -1157,7 +1157,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Fore Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Chamomile (Hot)",
           "description": "Chamomile flowers boast a rich honey aroma and yield a golden, theine-free cup"
         }
@@ -1169,7 +1169,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Fore Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Chamomile (Iced)",
           "description": "Chamomile flowers boast a rich honey aroma and yield a golden, theine-free cup"
         }
@@ -1181,7 +1181,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Fore Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Creme Caramel Tea (Hot)",
           "description": "Delicate red tea from South Africa with blend of sweet French spices"
         }
@@ -1193,7 +1193,7 @@
         "fields": {
           "merchant_area": "jakarta",
           "merchant_name": "Fore Coffee",
-          "category": "Non kopi",
+          "category": "Non_Kopi",
           "product": "Creme Caramel Tea (Iced)",
           "description": "Delicate red tea from South Africa with blend of sweet French spices"
         }
