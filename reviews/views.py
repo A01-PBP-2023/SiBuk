@@ -96,6 +96,7 @@ def get_all_reviews_partial(request):
     for food in foods:
         food_data = serializers.serialize('python', [food])[0]
         food_data['type'] = 'food'
+        food_data['category'] = food.category
         food_data['fields']['average_rating'] = food.reviews.aggregate(avg_rating=Avg('rating'))['avg_rating'] or 0
         food_data['fields']['percentage_rating'] = food_data['fields']['average_rating']/5*100
         food_data['fields']['num_reviews'] = food.num_reviews
@@ -104,6 +105,7 @@ def get_all_reviews_partial(request):
     for drink in drinks:
         drink_data = serializers.serialize('python', [drink])[0]
         drink_data['type'] = 'drink'
+        drink_data['category'] = drink.category
         drink_data['fields']['average_rating'] = drink.reviews.aggregate(avg_rating=Avg('rating'))['avg_rating'] or 0
         drink_data['fields']['percentage_rating'] = drink_data['fields']['average_rating']/5*100
         drink_data['fields']['num_reviews'] = drink.num_reviews
@@ -128,6 +130,7 @@ def get_all_reviews_json(request):
             'model': 'food',
             'pk': food.id,
             'fields': {
+                'category':food.category,
                 'average_rating': average_rating,
                 'percentage_rating': average_rating / 5 * 100,
                 'num_reviews': food.num_reviews
@@ -142,6 +145,7 @@ def get_all_reviews_json(request):
             'model': 'drink',
             'pk': drink.id,
             'fields': {
+                'category':drink.category,
                 'average_rating': average_rating,
                 'percentage_rating': average_rating / 5 * 100,
                 'num_reviews': drink.num_reviews
