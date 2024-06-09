@@ -11,7 +11,6 @@ from .forms import ReviewForm
 from foods.models import Food
 from drinks.models import Drink
 
-
 @login_required(login_url='/user_auth/login')
 def review_fnd(request, content_type, object_id):
     content_type = ContentType.objects.get(model=content_type)
@@ -39,7 +38,6 @@ def review_fnd(request, content_type, object_id):
     form = ReviewForm()
     return render(request, 'review_form.html', {'object': obj, 'form':form})
 
-
 def review_fnd_ajax(request, content_type, object_id):
     content_type = ContentType.objects.get(model=content_type)
     if (content_type.model != 'food') and (content_type.model == 'drink'):
@@ -65,7 +63,6 @@ def review_fnd_ajax(request, content_type, object_id):
 
     return JsonResponse({'success': False, 'error': 'Invalid request method'})
 
-
 def get_reviews_json(request, content_type, object_id):
     content_type = ContentType.objects.get(model=content_type)
     if content_type.model == 'food':
@@ -77,8 +74,6 @@ def get_reviews_json(request, content_type, object_id):
     reviews = Review.objects.filter(content_type=content_type, object_id=object_id)
     reviews_data = serializers.serialize('json', reviews)
     return JsonResponse({'reviews': reviews_data}, safe=False)
-
-
 
 def get_reviews_template(request, content_type, object_id):
     content_type = ContentType.objects.get(model=content_type)
@@ -92,11 +87,8 @@ def get_reviews_template(request, content_type, object_id):
     return render(request, 'fnd_reviews.html', {'reviews': reviews})
 
 
-
 def reviews_template(request):
     return render(request, 'all_reviews.html')
-
-
 
 def get_all_reviews_partial(request):
     data = []
@@ -143,7 +135,6 @@ def get_all_reviews_json(request):
         }
         data.append(food_data)
 
-    # Get all drinks with their review counts and prefetch the reviews
     drinks = Drink.objects.prefetch_related('reviews').annotate(num_reviews=Count('reviews')).all()
     for drink in drinks:
         average_rating = drink.reviews.aggregate(avg_rating=Avg('rating'))['avg_rating'] or 0
@@ -165,4 +156,3 @@ def get_all_reviews_json(request):
         data.sort(key=lambda x: x['fields']['num_reviews'], reverse=True)
 
     return JsonResponse(data, safe=False)
-
