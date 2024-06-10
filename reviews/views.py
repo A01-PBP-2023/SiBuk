@@ -6,6 +6,10 @@ from django.core import serializers
 from django.urls import reverse
 from django.db.models import Count, Avg
 from django.template.loader import render_to_string
+from django.middleware.csrf import get_token
+from django.views.decorators.csrf import csrf_exempt
+import json
+
 from .models import Review
 from .forms import ReviewForm
 from foods.models import Food
@@ -62,6 +66,43 @@ def review_fnd_ajax(request, content_type, object_id):
             return JsonResponse({'success': False, 'login_required': True})
 
     return JsonResponse({'success': False, 'error': 'Invalid request method'})
+
+@csrf_exempt
+def review_fnd_flutter(request, content_type, object_id):
+    content_type = ContentType.objects.get(model=content_type)
+    if (content_type.model != 'food') and (content_type.model == 'drink'):
+        return JsonResponse({'success': False})
+    
+    if request.method == 'POST':
+        if request.user.is_authenticated:
+            try:
+                data = json.loads(request.body)
+                rating = data.get('rating')
+                ulasan = data.get('ulasan')
+
+                if not (rating and ulasan):
+                    return JsonResponse({'success': False, 'error': 'Missing rating or ulasan'})
+
+                Review.objects.create(
+                    user=request.user,
+                    rating=rating,
+                    ulasan=ulasan,
+                    content_type=content_type,
+                    object_id=object_id
+                )
+                return JsonResponse({'success': True}, status=200)
+            except json.JSONDecodeError:
+                return JsonResponse({'success': False, 'error': 'Invalid JSON data'}, status=300)
+            except Exception as e:
+                return JsonResponse({'success': False, 'error': str(e)}, status=300)
+        else:
+            return JsonResponse({'success': False, 'login_required': True}, status=403)
+
+    return JsonResponse({'success': False, 'error': 'Invalid request method'}, status=404)
+
+def get_csrf_token_ajax(request):
+    csrf_token = get_token(request)
+    return JsonResponse({'csrf_token': csrf_token})
 
 def get_reviews_json(request, content_type, object_id):
     content_type = ContentType.objects.get(model=content_type)
@@ -120,42 +161,26 @@ def get_all_reviews_partial(request):
 
 def get_all_reviews_json(request):
     data = []
-
     foods = Food.objects.prefetch_related('reviews').annotate(num_reviews=Count('reviews')).all()
     for food in foods:
-        average_rating = food.reviews.aggregate(avg_rating=Avg('rating'))['avg_rating'] or 0
-        food_data = {
-            'model': 'food',
-            'pk': food.id,
-            'fields': {
-                'product': food.product,
-                'category':food.category,
-                'average_rating': average_rating,
-                'percentage_rating': average_rating / 5 * 100,
-                'num_reviews': food.num_reviews
-            }
-        }
+        food_data = serializers.serialize('python', [food])[0]
+        food_data['type'] = 'food'
+        food_data['fields']['average_rating'] = food.reviews.aggregate(avg_rating=Avg('rating'))['avg_rating'] or 0
+        food_data['fields']['percentage_rating'] = food_data['fields']['average_rating']/5*100
+        food_data['fields']['num_reviews'] = food.num_reviews
         data.append(food_data)
-
     drinks = Drink.objects.prefetch_related('reviews').annotate(num_reviews=Count('reviews')).all()
     for drink in drinks:
-        average_rating = drink.reviews.aggregate(avg_rating=Avg('rating'))['avg_rating'] or 0
-        drink_data = {
-            'model': 'drink',
-            'pk': drink.id,
-            'fields': {
-                'product': drink.product,
-                'category': drink.category,
-                'average_rating': average_rating,
-                'percentage_rating': average_rating / 5 * 100,
-                'num_reviews': drink.num_reviews
-            }
-        }
+        drink_data = serializers.serialize('python', [drink])[0]
+        drink_data['type'] = 'drink'
+        drink_data['fields']['average_rating'] = drink.reviews.aggregate(avg_rating=Avg('rating'))['avg_rating'] or 0
+        drink_data['fields']['percentage_rating'] = drink_data['fields']['average_rating']/5*100
+        drink_data['fields']['num_reviews'] = drink.num_reviews
         data.append(drink_data)
 
     sort_by = request.GET.get('sort_by')
     if sort_by == 'rating':
-        data.sort(key=lambda x: x['fields']['average_rating'], reverse=True)
+        data.sort(key=lambda x: x['fields']['average_rating'] or 0, reverse=True)
     elif sort_by == 'reviews':
         data.sort(key=lambda x: x['fields']['num_reviews'], reverse=True)
 
